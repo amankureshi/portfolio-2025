@@ -6,130 +6,37 @@
     padding: 0;
 }
 
-
-html {
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+.navbar .navbar-brand {
+    font-size: 25px;
+    color: #192F57;
+    font-weight: 600;
 }
 
-nav {
-    z-index: 9999;
-    position: relative;
-    top: 0;
-    width: 100%;
-}
-
-.container0 {
-    display: inline-block;
-    height: 60px;
-    width: 100%;
-    background: #ECECEC;
-}
-
-.inav {
-    padding: 12px;
-    height: 50px;
-    width: 50px;
-    margin: 5px;
-    float: right;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 2px solid #d7b94c;
-    border-radius: 25px;
-}
-
-.c1,
-.c2,
-.c3 {
-    width: 26px;
-    height: 2px;
-    background: #d7b94c;
-    border-radius: 2px;
-    transition: transform .3s ease-out, width .3s ease-in;
-    transform: translateY(0) rotate(0);
-}
-
-.close-c1 {
-    transform: translateY(10px) rotate(45deg);
-}
-
-.close-c2 {
-    width: 0;
-}
-
-.close-c3 {
-    transform: translateY(-10px) rotate(-45deg);
-}
-
-.nav {
-    z-index: 2;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    display: none;
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .1);
-    position: relative;
-    top: -4px;
-    transition: max-height 0.3s ease-out;
-    max-height: 0;
-    overflow: hidden;
-}
-
-.open {
-    display: flex;
-    flex-direction: column;
-    max-height: 500px;
-    animation: 300ms show ease-out forwards;
-}
-
-ul a {
+ul .nav-link {
     text-align: center;
     display: inline-block;
     color: #aaa;
     padding: 13px;
     font-size: 18px;
-    border-top: 1px #BDC3C7 solid;
     text-decoration: none;
 }
 
 ul a:hover {
-    background-color: #DADFE1;
+
     color: #607D8B;
 }
 
-@media (min-width: 500px) {
-    #nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        top: 0;
-        position: static;
-    }
 
-    .open {
-        flex-direction: row;
-    }
 
-    ul a {
-        border-top: 0;
-    }
-
-    .container0 {
-        display: none;
-    }
-
-    .nav {
-        max-height: none !important;
-        display: flex !important;
-    }
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #192F57;
+    transition: width .3s;
 }
 
-@keyframes show {
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.nav-link:hover::after {
+    width: 100%;
 }
