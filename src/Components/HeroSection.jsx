@@ -11,8 +11,11 @@ const HeroSection = () => {
         <h1>
           <ul>
             <li>
-              Currently working on the 100-project challenge to expand my
-              front-end development skills.
+              Currently working on the
+              <a href="" className="hundred-link text-decoration-none px-1">
+                100-project
+              </a>
+              challenge to expand my front-end development skills.
             </li>
             <li>
               In my BCA , I achieved the 1st position in web design competitions
@@ -20,12 +23,27 @@ const HeroSection = () => {
             </li>
           </ul>
         </h1>
+        <div className="hero-button">
+          <button className="hero-btn">
+            <a
+              href="https://github.com/amankureshi"
+              target="_blank"
+              className="text-decoration-none text-white"
+            >
+              Github
+            </a>
+          </button>
+          <button className="hero-btn">
+            <a
+              href="https://www.linkedin.com/in/aman-kureshi/"
+              target="_blank"
+              className="text-decoration-none text-white"
+            >
+              Linkedin
+            </a>
+          </button>
+        </div>
       </div>
-      {/* <button className="resume-btn">
-        <a href="/images/my-resume.pdf" download="resume">
-          Resume
-        </a>
-      </button> */}
       <div className="image-section">
         <img
           src="https://amankureshi.vercel.app/images/aman-logo1.png"
