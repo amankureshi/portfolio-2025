@@ -10,6 +10,30 @@
     font-size: 25px;
     color: #192F57;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    border: 2px solid #2c2c2c;
+    padding: 3px;
+}
+
+/* Logo-css */
+
+.navbar-brand .highlight {
+    background-color: #ffaa50;
+    color: white;
+    padding: 5px 6px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand .name {
+    color: #000a47;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
 }
 
 ul .nav-link {
@@ -26,8 +50,6 @@ ul a:hover {
     color: #607D8B;
 }
 
-
-
 .nav-link::after {
     content: '';
     display: block;
@@ -39,4 +61,27 @@ ul a:hover {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+
+.resume-btn {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fff;
+    background: #000a47;
+    line-height: 1.15;
+    font-size: 16px;
+}
+
+.resume-btn:hover {
+    color: #fff;
+    transition: all .2s ease-in-out;
+    /* box-shadow: 0 0 0 0 #fb9e53, 0 0 0 3px #fb9e53; */
+    background-color: #fb9e53;
 }

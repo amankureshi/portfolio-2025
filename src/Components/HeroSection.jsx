@@ -2,7 +2,7 @@ import React from "react";
 import "./HeroSection.css";
 const HeroSection = () => {
   return (
-    <main className="hero-content  mt-5">
+    <main className="hero-content container mt-5">
       <div className="animation-text">
         <h2>Hello, my name is</h2>
         <h3>
@@ -22,7 +22,9 @@ const HeroSection = () => {
         </h1>
       </div>
       {/* <button className="resume-btn">
-        <a href="" download="resume"></a>
+        <a href="/images/my-resume.pdf" download="resume">
+          Resume
+        </a>
       </button> */}
       <div className="image-section">
         <img

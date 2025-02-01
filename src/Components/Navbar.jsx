@@ -8,7 +8,8 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              Aman
+              <div className="highlight">AMAN</div>
+              <div className="name">KURESHI</div>
             </a>
             <button
               className="navbar-toggler"
@@ -52,7 +53,7 @@ const Navbar = () => {
                 </li>
               </ul>
               <form className="d-flex">
-                <button className="btn btn-outline-success" type="submit">
+                <button className="btn resume-btn" type="submit">
                   Resume
                 </button>
               </form>
