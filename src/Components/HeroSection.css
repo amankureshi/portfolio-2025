@@ -86,6 +86,7 @@ main {
 .hero-button {
     display: flex;
     gap: 1rem;
+    /* flex-wrap: wrap; */
 }
 
 .hero-btn {
@@ -133,6 +134,10 @@ main {
     font-weight: 600;
 }
 
+.animation-text ul li {
+    font-size: 1.1rem;
+}
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2rem;
@@ -163,7 +168,8 @@ main {
     }
 
     main .animation-text h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        border: 2px solid red;
     }
 
     main .animation-text h3 {
@@ -192,13 +198,34 @@ main {
         gap: 1rem;
     }
 
-    .hero-content {
-        text-align: center;
-        line-height: 3rem;
+    .hero-content ul {
+        text-align: justify;
     }
 
     .image-section img {
         max-width: 10.5rem;
+    }
+
+    .animation-text {
+        text-align: center;
+    }
+
+    .hero-button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-btn {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 290px;
+        padding: 0 20px;
+        height: 40px;
+        font-size: 14px;
     }
 
 

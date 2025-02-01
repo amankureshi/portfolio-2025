@@ -8,21 +8,20 @@ const HeroSection = () => {
         <h3>
           Aman <span>Kureshi</span>
         </h3>
-        <h1>
-          <ul>
-            <li>
-              Currently working on the
-              <a href="" className="hundred-link text-decoration-none px-1">
-                100-project
-              </a>
-              challenge to expand my front-end development skills.
-            </li>
-            <li>
-              In my BCA , I achieved the 1st position in web design competitions
-              during both my 1st and 2nd years
-            </li>
-          </ul>
-        </h1>
+        <ul>
+          <li>
+            Currently working on the
+            <a href="" className="hundred-link text-decoration-none px-1">
+              100-project
+            </a>
+            challenge to expand my front-end development skills.
+          </li>
+          <li>
+            In my BCA , I achieved the 1st position in web design competitions
+            during both my 1st and 2nd years
+          </li>
+        </ul>
+
         <div className="hero-button">
           <button className="hero-btn">
             <a
