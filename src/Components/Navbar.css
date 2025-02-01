@@ -8,6 +8,16 @@
 
 .navbar .navbar-brand {
     font-size: 25px;
+    color: #192F57;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.navbar .navbar-brand {
+    font-size: 10px;
     color: #F63EAA;
     font-weight: 600;
     display: flex;
@@ -16,8 +26,58 @@
     gap: 2px;
 }
 
-/* Logo-css */
+.fly-icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+.navbar .navbar-brand:hover .fly-icon {
+    animation: flyAndFlip 0.6s forwards;
+}
+
+@keyframes flyAndFlip {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+
+    }
+
+    50% {
+        transform: translate(30px, -30px) rotate(180deg);
+
+    }
+
+    100% {
+        transform: translate(60px, -60px) rotate(360deg);
+
+    }
+}
+
+.navbar .navbar-brand .fly-icon {
+    animation: continueAnimation 1.5s ease-out forwards;
+}
+
+@keyframes continueAnimation {
+    0% {
+        transform: translate(60px, -60px) rotate(360deg);
+
+    }
+
+    50% {
+        transform: translate(30px, -30px) rotate(180deg);
+
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+
+    }
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Logo-css */
 .navbar-brand .highlight {
     color: #ffaa50;
     font-weight: bold;

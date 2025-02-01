@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               <div className="highlight">AMAN</div>
-              <FaBluesky />
+              <FaBluesky className="fly-icon" />
               <div className="name">KURESHI</div>
             </a>
             <button
