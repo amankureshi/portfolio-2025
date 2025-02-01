@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { FaBluesky } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -9,6 +10,7 @@ const Navbar = () => {
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               <div className="highlight">AMAN</div>
+              <FaBluesky />
               <div className="name">KURESHI</div>
             </a>
             <button
