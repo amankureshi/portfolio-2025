@@ -147,6 +147,30 @@ const content = {
       sourceCodeLink: "https://github.com/amankureshi/Air-jordan-react",
       visitPageLink: "https://air-jordan1.vercel.app/",
     },
+    {
+      title: "Contact-Page",
+      imageSrc: "https://i.postimg.cc/Y9dp7YjJ/contact.jpg",
+      sourceCodeLink: "https://github.com/amankureshi/Contact-page",
+      visitPageLink: "https://contact-page1.vercel.app/",
+    },
+    {
+      title: "Dice Game",
+      imageSrc: "https://i.postimg.cc/fR2GQFd7/dice-game.png",
+      sourceCodeLink: "https://github.com/amankureshi/Dice-Game",
+      visitPageLink: "https://dice-game7.vercel.app/",
+    },
+    {
+      title: "E-commerce",
+      imageSrc: "https://i.postimg.cc/MZ37C6sB/e-commerce.png",
+      sourceCodeLink: "https://github.com/amankureshi/E-commerce",
+      visitPageLink: "https://armanee.vercel.app/",
+    },
+    {
+      title: "Contact-app",
+      imageSrc: "https://i.postimg.cc/XWt2yZpb/contact-app.png",
+      sourceCodeLink: "https://github.com/amankureshi/Contact-App",
+      visitPageLink: "https://contact-app01.vercel.app/",
+    },
   ],
 };
 
