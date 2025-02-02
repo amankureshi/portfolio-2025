@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Project.css";
+import Loader from "../assets/Loader/loader-spinner.svg";
 
 const content = {
   javascript: [
@@ -178,10 +179,17 @@ export default function Project() {
           <div key={index} className="col">
             <div className="card">
               <h5 className="card-title pt-3 pb-2">{item.title}</h5>
+              {loading && (
+                <div className="loader-container">
+                  <img src={Loader} alt="Loading..." width="150" height="200" />
+                </div>
+              )}
               <img
                 src={item.imageSrc}
                 alt={item.title}
+                onLoad={handleImageLoad}
                 className="card-img-top"
+                style={{ display: loading ? "none" : "block" }}
               />
               <div className="card-body">
                 <div className="d-flex justify-content-between">
