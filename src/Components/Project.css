@@ -1,0 +1,32 @@
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 2px !important;
+}
+
+.btn-custom {
+    width: 120px;
+}
+
+
+.btn-group .btn-custom.active {
+    background-color: #000055;
+    color: white;
+}
+
+.btn-group .btn-custom.active:hover {
+    background-color: #000055;
+}
+
+@media (max-width: 576px) {
+    .btn-custom {
+        font-size: 1rem;
+        padding: 5px;
+        max-width: 100px;
+    }
+
+    .btn-group,
+    .btn-group-vertical {
+        display: block;
+    }
+}

@@ -15,6 +15,73 @@ const content = {
       sourceCodeLink: "https://github.com/amankureshi/Joke-generator",
       visitPageLink: "https://joke-generator-gilt.vercel.app/",
     },
+    {
+      title: "Timer",
+      imageSrc: "https://i.postimg.cc/FNH739yN/timer.png",
+      sourceCodeLink: "https://github.com/amankureshi/Timer",
+      visitPageLink: "https://amankureshi.github.io/Timer/",
+    },
+    {
+      title: "Calculator",
+      imageSrc: "https://i.postimg.cc/Y0nSF43r/calc.png",
+      sourceCodeLink: "https://github.com/amankureshi/calculator1",
+      visitPageLink: "https://calculator1-nine-psi.vercel.app/",
+    },
+    {
+      title: "Form",
+      imageSrc: "https://i.postimg.cc/FHsHrPhR/form.png",
+      sourceCodeLink: "https://github.com/amankureshi/Form-validation",
+      visitPageLink: "https://form-v.vercel.app/",
+    },
+    {
+      title: "Music-app",
+      imageSrc: "https://i.postimg.cc/XYFVj1T7/music-app.png",
+      sourceCodeLink: "https://github.com/amankureshi/Music-Player-App",
+      visitPageLink: "https://song-anywhere.vercel.app/",
+    },
+    ,
+    {
+      title: "Color-changer",
+      imageSrc: "https://i.postimg.cc/fyTD9y6v/arrow.jpg",
+      sourceCodeLink: "https://github.com/amankureshi/Color-changer",
+      visitPageLink: "https://color-changer01.vercel.app/",
+    },
+    {
+      title: "Clock",
+      imageSrc: "https://i.postimg.cc/Pds35Xr8/clock.png",
+      sourceCodeLink: "https://github.com/amankureshi/Clock",
+      visitPageLink: "https://clock-analog.vercel.app/",
+    },
+    {
+      title: "BMI-Calcultor",
+      imageSrc: "https://i.postimg.cc/ZYdtwDqr/bmi.jpg",
+      sourceCodeLink: "https://github.com/amankureshi/Bmi-Generetor",
+      visitPageLink: "https://bmi-generetor.vercel.app/",
+    },
+    {
+      title: "Search Filter",
+      imageSrc:
+        "https://i.postimg.cc/Pq0MWXTx/Screenshot-2024-11-20-173241.png",
+      sourceCodeLink:
+        "https://github.com/amankureshi/100-projects-challenge/tree/main/day-01",
+      visitPageLink: "https://search-filterday01.vercel.app/",
+    },
+    {
+      title: "Humburger",
+      imageSrc:
+        "https://i.postimg.cc/xCfJWBfQ/Screenshot-2024-11-20-173944.png",
+      sourceCodeLink:
+        "https://github.com/amankureshi/100-projects-challenge/tree/main/day-02",
+      visitPageLink: "https://humburger1.vercel.app/",
+    },
+    {
+      title: "Toast Notification",
+      imageSrc:
+        "https://i.postimg.cc/8cKrN4yY/Screenshot-2024-11-20-174347.png",
+      sourceCodeLink:
+        "https://github.com/amankureshi/100-projects-challenge/tree/main/day-03",
+      visitPageLink: "https://day-03.onrender.com/",
+    },
   ],
   css: [
     {
@@ -38,20 +105,21 @@ export default function Project() {
   const [activeTab, setActiveTab] = useState("javascript");
 
   return (
-    <div className="container p-4">
-      <div className="btn-group d-flex mb-4">
+    <div className="container tab-center text-center p-4">
+      <div className="btn-group mb-4">
         {Object.keys(content).map((tab) => (
           <button
             key={tab}
             className={`btn ${
-              activeTab === tab ? "btn-primary" : "btn-secondary"
-            }`}
+              activeTab === tab ? "btn-primary active" : "btn-secondary"
+            } btn-custom`}
             onClick={() => setActiveTab(tab)}
           >
             {tab.toUpperCase()}
           </button>
         ))}
       </div>
+
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {content[activeTab].map((item, index) => (
           <div key={index} className="col">
