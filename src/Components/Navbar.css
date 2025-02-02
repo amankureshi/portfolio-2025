@@ -101,8 +101,10 @@ ul .nav-link {
     display: inline-block;
     color: #aaa;
     padding: 13px;
-    font-size: 18px;
+    font-size: 0.9rem;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 ul a:hover {
