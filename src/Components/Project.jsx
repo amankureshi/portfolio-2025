@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Project.css";
 
 const content = {
   javascript: [
@@ -37,13 +38,13 @@ export default function Project() {
   const [activeTab, setActiveTab] = useState("javascript");
 
   return (
-    <div className="p-4">
-      <div className="flex space-x-4 mb-4">
+    <div className="container p-4">
+      <div className="btn-group d-flex mb-4">
         {Object.keys(content).map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2 border rounded ${
-              activeTab === tab ? "bg-blue-500 text-white" : "bg-gray-200"
+            className={`btn ${
+              activeTab === tab ? "btn-primary" : "btn-secondary"
             }`}
             onClick={() => setActiveTab(tab)}
           >
@@ -51,30 +52,34 @@ export default function Project() {
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {content[activeTab].map((item, index) => (
-          <div key={index} className="border p-4 rounded shadow-md">
-            <h2 className="text-lg font-bold">{item.title}</h2>
-            <img
-              src={item.imageSrc}
-              alt={item.title}
-              className="w-full h-40 object-cover my-2"
-            />
-            <div className="flex justify-between">
-              <a
-                href={item.sourceCodeLink}
-                target="_blank"
-                className="text-blue-500"
-              >
-                Source Code
-              </a>
-              <a
-                href={item.visitPageLink}
-                target="_blank"
-                className="text-green-500"
-              >
-                Visit Page
-              </a>
+          <div key={index} className="col">
+            <div className="card h-100">
+              <img
+                src={item.imageSrc}
+                alt={item.title}
+                className="card-img-top"
+              />
+              <div className="card-body">
+                <h5 className="card-title">{item.title}</h5>
+                <div className="d-flex justify-content-between">
+                  <a
+                    href={item.sourceCodeLink}
+                    target="_blank"
+                    className="btn btn-link text-primary"
+                  >
+                    Source Code
+                  </a>
+                  <a
+                    href={item.visitPageLink}
+                    target="_blank"
+                    className="btn btn-link text-success"
+                  >
+                    Visit Page
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         ))}
