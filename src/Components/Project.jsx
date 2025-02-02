@@ -190,7 +190,7 @@ export default function Project() {
             key={tab}
             className={`btn ${
               activeTab === tab ? "btn-primary active" : "btn-secondary"
-            } btn-custom`}
+            } btn-custom mt-4`}
             onClick={() => setActiveTab(tab)}
           >
             {tab.toUpperCase()}
@@ -202,7 +202,7 @@ export default function Project() {
         {content[activeTab].map((item, index) => (
           <div key={index} className="col">
             <div className="card">
-              <h5 className="card-title pt-3 pb-2">{item.title}</h5>
+              <h4 className="card-title pt-3 pb-2">{item.title}</h4>
               {loading && (
                 <div className="loader-container">
                   <img src={Loader} alt="Loading..." width="150" height="200" />

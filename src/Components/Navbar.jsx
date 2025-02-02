@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { FaBluesky } from "react-icons/fa6";
+import Resume from "../assets/aman-resume-2025.pdf";
 
 const Navbar = () => {
   return (
@@ -56,7 +57,13 @@ const Navbar = () => {
               </ul>
               <form className="d-flex">
                 <button className="btn resume-btn" type="submit">
-                  Resume
+                  <a
+                    href={Resume}
+                    className="text-decoration-none text-white"
+                    target="_blank"
+                  >
+                    Resume
+                  </a>
                 </button>
               </form>
             </div>
