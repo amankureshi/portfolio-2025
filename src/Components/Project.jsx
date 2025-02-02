@@ -123,26 +123,26 @@ export default function Project() {
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {content[activeTab].map((item, index) => (
           <div key={index} className="col">
-            <div className="card h-100">
+            <div className="card">
+              <h5 className="card-title pt-3 pb-2">{item.title}</h5>
               <img
                 src={item.imageSrc}
                 alt={item.title}
                 className="card-img-top"
               />
               <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
                 <div className="d-flex justify-content-between">
                   <a
                     href={item.sourceCodeLink}
                     target="_blank"
-                    className="btn btn-link text-primary"
+                    className="btn btn-link text-warning"
                   >
                     Source Code
                   </a>
                   <a
                     href={item.visitPageLink}
                     target="_blank"
-                    className="btn btn-link text-success"
+                    className="btn btn-link text-warning"
                   >
                     Visit Page
                   </a>

@@ -18,6 +18,30 @@
     background-color: #000055;
 }
 
+/* Card-css */
+
+.card {
+    border: none;
+    box-shadow: rgb(201, 197, 197) 0px 0px 4px 2px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-body .btn-link {
+    border: 2px solid rgb(0, 136, 169);
+    text-decoration: none;
+    border-radius: 5px !important;
+}
+
+.card-body .btn-link:hover {
+    border: 2px solid #000055;
+    background-color: #000055;
+    border-radius: 5px !important;
+    color: white !important;
+}
+
+
+
 @media (max-width: 576px) {
     .btn-custom {
         font-size: 1rem;
