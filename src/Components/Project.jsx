@@ -90,6 +90,54 @@ const content = {
       sourceCodeLink: "https://github.com/amankureshi/Restaurant-website",
       visitPageLink: "https://restaurant01.vercel.app/",
     },
+    {
+      title: "Paralax",
+      imageSrc: "https://i.postimg.cc/RhcRVBQL/parallax.png",
+      sourceCodeLink: "https://github.com/amankureshi/paralax",
+      visitPageLink: "https://amankureshi.github.io/Parallax/",
+    },
+    {
+      title: "My Collage",
+      imageSrc: "https://i.postimg.cc/1Rp12Nhb/bca-collge.png",
+      sourceCodeLink: "https://github.com/amankureshi/Npccsm-collage",
+      visitPageLink: "https://college-npccsm.vercel.app/",
+    },
+    {
+      title: "Music B5",
+      imageSrc: "https://i.postimg.cc/rFNJBqp8/dj.png",
+      sourceCodeLink: "https://github.com/amankureshi/music",
+      visitPageLink: "https://music-gray-one.vercel.app/",
+    },
+    {
+      title: "Appe-Music",
+      imageSrc: "https://i.postimg.cc/8Tw4wk34/music.png",
+      sourceCodeLink: "https://github.com/amankureshi/Timer",
+      visitPageLink: "https://amankureshi.github.io/Timer/",
+    },
+    {
+      title: "Job-Application",
+      imageSrc: "https://i.postimg.cc/zfsKLQft/job-app.png",
+      sourceCodeLink: "https://github.com/amankureshi/Music-2021",
+      visitPageLink: "https://music-2021.vercel.app/",
+    },
+    {
+      title: "Avatar-Clone",
+      imageSrc: "https://i.postimg.cc/7PTVLBQt/Avtar.jpg",
+      sourceCodeLink: "https://github.com/amankureshi/Avatar-clone",
+      visitPageLink: "https://avatar-clone.vercel.app/",
+    },
+    {
+      title: "Developer",
+      imageSrc: "https://i.postimg.cc/RVH58cF1/devloper.jpg",
+      sourceCodeLink: "https://github.com/amankureshi/Devleoper_website",
+      visitPageLink: "https://devleoper-website.vercel.app/",
+    },
+    {
+      title: "Blog-Website",
+      imageSrc: "https://i.postimg.cc/L8QCVzbS/blog-website.png",
+      sourceCodeLink: "https://github.com/amankureshi/Blog-website",
+      visitPageLink: "https://blog-website01.vercel.app/",
+    },
   ],
   react: [
     {
@@ -103,6 +151,11 @@ const content = {
 
 export default function Project() {
   const [activeTab, setActiveTab] = useState("javascript");
+  const [loading, setLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
 
   return (
     <div className="container tab-center text-center p-4">
