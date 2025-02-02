@@ -95,8 +95,7 @@ main {
     outline: 0;
     cursor: pointer;
     border: none;
-    padding: 0 56px;
-    height: 45px;
+    padding: 0 3rem;
     line-height: 45px;
     border-radius: 7px;
     font-weight: 400;
@@ -136,6 +135,12 @@ main {
 
 .animation-text ul li {
     font-size: 1.1rem;
+}
+
+/* Hero-button css */
+.hero-btn svg {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
 }
 
 @media (max-width: 768px) {
@@ -228,5 +233,12 @@ main {
         font-size: 14px;
     }
 
+    .navbar-toggler {
+        padding: 0;
+    }
+
+    .hero-btn svg {
+        font-size: 1rem;
+    }
 
 }

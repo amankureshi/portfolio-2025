@@ -1,5 +1,8 @@
 import React from "react";
 import "./HeroSection.css";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
 const HeroSection = () => {
   return (
     <main className="hero-content container mt-5">
@@ -11,7 +14,11 @@ const HeroSection = () => {
         <ul>
           <li>
             Currently working on the
-            <a href="" className="hundred-link text-decoration-none px-1">
+            <a
+              href="https://100-projects-challenge.vercel.app/"
+              target="_blank"
+              className="hundred-link text-decoration-none px-1"
+            >
               100-project
             </a>
             challenge to expand my front-end development skills.
@@ -29,7 +36,7 @@ const HeroSection = () => {
               target="_blank"
               className="text-decoration-none text-white"
             >
-              Github
+              Github <FaGithub />
             </a>
           </button>
           <button className="hero-btn">
@@ -38,14 +45,14 @@ const HeroSection = () => {
               target="_blank"
               className="text-decoration-none text-white"
             >
-              Linkedin
+              Linkedin <FaLinkedin />
             </a>
           </button>
         </div>
       </div>
       <div className="image-section">
         <img
-          src="https://amankureshi.vercel.app/images/aman-logo1.png"
+          src="https://i.postimg.cc/YS0skTDb/aman-ps-1.jpg"
           alt="Aman Kureshi Logo"
         />
       </div>

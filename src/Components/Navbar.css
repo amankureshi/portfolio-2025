@@ -77,6 +77,10 @@
     box-shadow: none;
 }
 
+.navbar-light .navbar-toggler-icon {
+    background-image: url(https://img.icons8.com/?size=192&id=Rdp3AydLFY2A&format=png);
+}
+
 /* Logo-css */
 .navbar-brand .highlight {
     color: #ffaa50;
