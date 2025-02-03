@@ -47,10 +47,16 @@
         font-size: 1rem;
         padding: 5px;
         max-width: 100px;
+        margin-bottom: 1px;
     }
 
     .btn-group,
     .btn-group-vertical {
         display: block;
+    }
+
+    .card-body .btn-link {
+        padding: 5px;
+        font-size: 13px;
     }
 }
