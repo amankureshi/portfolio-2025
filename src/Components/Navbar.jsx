@@ -36,12 +36,17 @@ const Navbar = () => {
                     aria-current="page"
                     href="#"
                   >
-                    Project
+                    Home
                   </a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link text-dark" href="#">
                     About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link text-dark " href="#">
+                    Projects
                   </a>
                 </li>
                 <li className="nav-item">
