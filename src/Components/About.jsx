@@ -17,12 +17,12 @@ const About = () => {
             <p className="about-text">
               I am a Frontend Developer.I love creating beautifull, usefull
               websites. I am always open to learn new technologies. I always try
-              to expand my tech stack. I also have an extra interest in CSS
+              to expand my tech stack. I also have an extra interest in CSS.
             </p>
             <p className="about-text">
               I won 1st place in my college's web design competition in both 1st
               and 2nd year. These achievements helped me improve my skills,
-              boost my creativity, and gain good experience in web development
+              boost my creativity, and gain good experience in web development.
             </p>
           </div>
           <div className="col-md-6">

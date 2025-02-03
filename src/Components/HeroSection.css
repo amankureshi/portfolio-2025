@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
+.hero-content {
+    background-color: #f2f5f8;
+}
+
 .hero-content h1 {
     font-size: 1.2rem;
     font-weight: 400;
