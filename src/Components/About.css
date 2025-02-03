@@ -1,0 +1,27 @@
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 260px;
+    border: 5px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-reverse {
+    flex-direction: row-reverse;
+}
+
+.col-md-6 .about-text {
+    text-align: justify;
+}
