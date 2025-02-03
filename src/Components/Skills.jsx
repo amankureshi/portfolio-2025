@@ -1,4 +1,5 @@
 import React from "react";
+import "./Skill.css";
 
 const Skills = () => {
   const data = [
@@ -18,7 +19,6 @@ const Skills = () => {
       imageSrc: "https://mahin.vercel.app/svgs/REACT-icon.svg",
       name: "React",
     },
-    ,
     {
       imageSrc: "https://img.icons8.com/?size=200&id=HKNzD81eiiSc&format=png",
       name: "J-query",
@@ -47,24 +47,20 @@ const Skills = () => {
   ];
 
   return (
-    <section style={{ backgroundColor: "#f2f8fdc0" }}>
-      <div className="container ">
-        <h2 className="text-center pt-3 pb-3">Skills</h2>
-        <div className="row justify-content-center gap-4">
+    <section className="skills-section">
+      <div className="skills-container">
+        <h2 className="skills-heading">Skills</h2>
+        <div className="skills-row">
           {data.map((item, index) => (
-            <div className=" col-sm-4 col-md-3 col-lg-2 mb-4" key={index}>
-              <div
-                className="card  rounded-3 shadow-md"
-                style={{ width: "12rem" }}
-              >
+            <div className="skills-card-container" key={index}>
+              <div className="skills-card">
                 <img
                   src={item.imageSrc}
-                  className="card-img-top mt-4"
+                  className="skills-card-image"
                   alt={item.name}
-                  style={{ height: "110px", objectFit: "contain" }}
                 />
-                <div className="card-body text-center">
-                  <h5 className="card-title">{item.name}</h5>
+                <div className="skills-card-body">
+                  <h5 className="skills-card-title">{item.name}</h5>
                 </div>
               </div>
             </div>

@@ -1,0 +1,90 @@
+/* Styles for the Skills section */
+.skills-section {
+    background-color: #f2f8fd;
+    padding: 50px 0;
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills-card-container {
+    flex: 1 1 200px;
+    /* Makes it responsive */
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.skills-card {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.skills-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skills-card-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.skills-card-body {
+    text-align: center;
+}
+
+.skills-card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.skills-card-body:hover .skills-card-title {
+    color: #000055;
+    /* Blue color on hover */
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+    .skills-card-container {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-card-container {
+        flex: 1 1 80%;
+    }
+}
