@@ -82,7 +82,13 @@ const ContactUs = () => {
               </form>
             </div>
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <img
+              src="https://i1.wp.com/ashwinishenoy.com/wp-content/uploads/2021/09/pexels-daria-shevtsova-930004-scaled-1.jpg?w=1920&ssl=1"
+              alt="Contact-Image"
+              className=" shadow-sm"
+            />
+          </div>
         </div>
       </div>
     </div>
