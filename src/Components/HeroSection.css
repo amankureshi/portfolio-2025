@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
+
 .hero-content {
     background-color: #f2f5f8;
 }
@@ -152,6 +153,10 @@ main {
 }
 
 @media (max-width: 768px) {
+    .hero-content {
+        margin: 0;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
@@ -202,6 +207,9 @@ main {
         text-align: justify;
     }
 
+    .hero-button {
+        padding-bottom: 1rem;
+    }
 }
 
 @media (max-width: 500px) {
