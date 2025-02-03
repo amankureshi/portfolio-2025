@@ -86,7 +86,7 @@ const ContactUs = () => {
             <img
               src="https://i1.wp.com/ashwinishenoy.com/wp-content/uploads/2021/09/pexels-daria-shevtsova-930004-scaled-1.jpg?w=1920&ssl=1"
               alt="Contact-Image"
-              className=" shadow-sm"
+              className="shadow-sm Contact-Image"
             />
           </div>
         </div>
