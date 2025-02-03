@@ -8,22 +8,22 @@ import { CiGlobe } from "react-icons/ci";
 const ContactUs = () => {
   return (
     <div className="contact">
-      <div className="container py-5">
+      <div className="container py-2">
         <div className="row text-center mb-4">
           <div className="col-md-3">
-            <FaMapMarkerAlt />
+            <FaMapMarkerAlt className="icon" />
             <p>Kadi-Gujart,India</p>
           </div>
           <div className="col-md-3">
-            <MdCall />
+            <MdCall className="icon" />
             <p>+91 97128 27603</p>
           </div>
           <div className="col-md-3">
-            <SiMinutemailer />
+            <SiMinutemailer className="icon" />
             <p>amankureshi78692@gmail.com</p>
           </div>
           <div className="col-md-3">
-            <CiGlobe />
+            <CiGlobe className="icon" />
             <p>amankureshi</p>
           </div>
         </div>
