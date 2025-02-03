@@ -7,6 +7,10 @@
 }
 
 .nav-bg,
+.hero-content {
+    background-color: #F5FAFD;
+}
+
 .hero-bg {
-    background-color: #f2f5f8;
+    background-color: #F5FAFD;
 }
