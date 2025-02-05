@@ -5,7 +5,11 @@ import { FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <div className="hero-bg  d-flex justify-content-center align-items-center">
+    <div
+      className="hero-bg  d-flex justify-content-center align-items-center"
+      id="home"
+      to="home"
+    >
       <main className="hero-content container mt-5">
         <div className="animation-text">
           <h2>Hello, my name is</h2>

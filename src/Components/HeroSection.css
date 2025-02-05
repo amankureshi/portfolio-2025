@@ -220,6 +220,10 @@ main {
         text-align: start;
     }
 
+    .animation-text ul li {
+        font-size: 1rem;
+    }
+
     .image-section img {
         max-width: 10.5rem;
     }

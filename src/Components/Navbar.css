@@ -109,6 +109,7 @@ ul .nav-link {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
+    cursor: pointer;
 }
 
 ul a:hover {

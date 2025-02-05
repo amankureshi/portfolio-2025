@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { FaBluesky } from "react-icons/fa6";
 import Resume from "../assets/aman-resume-2025.pdf";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -31,33 +32,58 @@ const Navbar = () => {
             >
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ">
                 <li className="nav-item">
-                  <a
+                  <Link
                     className="nav-link text-dark  active "
                     aria-current="page"
-                    href="#"
+                    to="home"
+                    smooth={true}
+                    duration={500}
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">
+                  <Link
+                    className="nav-link text-dark"
+                    to="about"
+                    smooth={true}
+                    duration={100}
+                    offset={-80}
+                  >
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">
+                  <Link
+                    className="nav-link text-dark"
+                    to="skill_section"
+                    smooth={true}
+                    duration={100}
+                  >
                     Skills
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark " href="#">
+                  <Link
+                    className="nav-link text-dark "
+                    to="projects"
+                    smooth={true}
+                    duration={100}
+                    offset={-80}
+                  >
                     Projects
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-dark" href="#">
+                  <Link
+                    className="nav-link text-dark"
+                    to="contact"
+                    smooth={true}
+                    duration={100}
+                    offset={-80}
+                  >
                     Contact us
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <form className="d-flex">
