@@ -13,7 +13,11 @@ const HeroSection = () => {
       to="home"
     >
       <main className="hero-content container mt-5">
-        <div className="animation-text" data-aos="fade-right">
+        <div
+          className="animation-text"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <h2>Hello, my name is</h2>
           <h3>
             Aman <span>Kureshi</span>

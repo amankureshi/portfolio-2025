@@ -49,10 +49,16 @@ const Skills = () => {
   return (
     <section className="skills-section" id="skill_section" to="skill_section">
       <div className="skills-container">
-        <h2 className="skills-heading">My Skills</h2>
+        <h2
+          className="skills-heading"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          My Skills
+        </h2>
         <div className="skills-row container">
           {data.map((item, index) => (
-            <div className="skills-card-container " key={index}>
+            <div className="skills-card-container" key={index}>
               <div className="skills-card">
                 <img
                   src={item.imageSrc}

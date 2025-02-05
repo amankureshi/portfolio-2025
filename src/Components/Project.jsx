@@ -182,7 +182,9 @@ export default function Project() {
 
   return (
     <div className="container tab-center text-center p-4" id="projects">
-      <h2>My Projects</h2>
+      <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        My Projects
+      </h2>
       <div className="btn-group mb-4">
         {Object.keys(content).map((tab) => (
           <button

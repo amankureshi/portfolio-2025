@@ -9,7 +9,13 @@ const ContactUs = () => {
   return (
     <div className="contact">
       <div className="container">
-        <h2 className="contact-heading text-center">Contact Us</h2>
+        <h2
+          className="contact-heading text-center"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
+          Contact Us
+        </h2>
         <div className="row text-center mb-4"></div>
         <div className="row text-center mb-4">
           <div className="col-md-3">
@@ -26,13 +32,15 @@ const ContactUs = () => {
           </div>
           <div className="col-md-3">
             <CiGlobe className="icon" />
-            <p>amankureshi</p>
+            <p>
+              <a className="text-decoration-none text-dark">amankureshi</a>
+            </p>
           </div>
         </div>
         <div className="row">
           <div className="col-md-6">
             <div className="card shadow-sm p-4">
-              <h4 className="mb-3">Contact Us</h4>
+              <h4 className="mb-3">Contact me</h4>
               <form>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">
