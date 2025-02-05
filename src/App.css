@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .nav-bg,
 .hero-content {
     background-color: #F5FAFD;

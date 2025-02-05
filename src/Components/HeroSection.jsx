@@ -2,8 +2,10 @@ import React from "react";
 import "./HeroSection.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import useAOS from "../Hooks/useAos";
 
 const HeroSection = () => {
+  useAOS();
   return (
     <div
       className="hero-bg  d-flex justify-content-center align-items-center"
@@ -11,7 +13,7 @@ const HeroSection = () => {
       to="home"
     >
       <main className="hero-content container mt-5">
-        <div className="animation-text">
+        <div className="animation-text" data-aos="fade-right">
           <h2>Hello, my name is</h2>
           <h3>
             Aman <span>Kureshi</span>
@@ -55,7 +57,7 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
-        <div className="image-section">
+        <div className="image-section" data-aos="fade-left">
           <img
             src="https://i.postimg.cc/YS0skTDb/aman-ps-1.jpg"
             alt="Aman Kureshi Logo"
