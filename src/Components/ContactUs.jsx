@@ -8,7 +8,9 @@ import { CiGlobe } from "react-icons/ci";
 const ContactUs = () => {
   return (
     <div className="contact">
-      <div className="container py-2">
+      <div className="container">
+        <h2 className="contact-heading text-center">Contact Us</h2>
+        <div className="row text-center mb-4"></div>
         <div className="row text-center mb-4">
           <div className="col-md-3">
             <FaMapMarkerAlt className="icon" />

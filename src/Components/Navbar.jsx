@@ -37,7 +37,7 @@ const Navbar = () => {
                     aria-current="page"
                     to="home"
                     smooth={true}
-                    duration={500}
+                    duration={100}
                   >
                     Home
                   </Link>
