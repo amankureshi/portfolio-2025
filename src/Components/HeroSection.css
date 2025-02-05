@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
 
+.hero-bg {
+    background-color: #F5FAFD;
+    min-height: calc(100vh - 60px);
+    display: flex;
+}
+
+
 .hero-content h1 {
     font-size: 1.2rem;
     font-weight: 400;
@@ -31,10 +38,6 @@ main {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 8rem;
-    padding-right: 8rem;
     gap: 0.2rem;
 }
 
@@ -91,7 +94,6 @@ main {
 .hero-button {
     display: flex;
     gap: 1rem;
-    /* flex-wrap: wrap; */
 }
 
 .hero-btn {
@@ -125,7 +127,6 @@ main {
 }
 
 .hero-btn:hover {
-    background-color: transparent;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
 }
@@ -216,7 +217,7 @@ main {
     }
 
     .hero-content ul {
-        text-align: justify;
+        text-align: start;
     }
 
     .image-section img {
