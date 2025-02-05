@@ -3,7 +3,7 @@
 
 .hero-bg {
     background-color: #F5FAFD;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 10px);
     display: flex;
 }
 
