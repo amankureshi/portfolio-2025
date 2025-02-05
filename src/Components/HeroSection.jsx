@@ -18,14 +18,14 @@ const HeroSection = () => {
           </h3>
           <ul>
             <li>
-              Currently working on the
+              Currently working on the{" "}
               <a
                 href="https://100-projects-challenge.vercel.app/"
                 target="_blank"
-                className="hundred-link text-decoration-none px-1"
+                className="hundred-link text-decoration-none"
               >
                 100-projects
-              </a>
+              </a>{" "}
               challenge to expand my front-end development skills.
             </li>
             <li>

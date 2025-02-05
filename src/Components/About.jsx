@@ -3,8 +3,8 @@ import "./About.css";
 import aboutImage from "../assets/about-image.jpg";
 const About = () => {
   return (
-    <section id="about" className="about-section py-5">
-      <div className="container">
+    <section id="about" className="about-section py-5 container">
+      <div className="container-fluid">
         <div className="row text-center image-reverse">
           <div className="col-md-6">
             <h2 className="section-title">About Me</h2>
