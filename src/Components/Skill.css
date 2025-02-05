@@ -84,7 +84,7 @@
 
 @media (max-width: 576px) {
     .skills-card-container {
-        flex: 1 1 10%;
+        flex: 1 1 30%;
     }
 
     .skills-card-image {
