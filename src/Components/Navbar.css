@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+.nav-bg .container {
+    backdrop-filter: blur(4px);
+}
+
 .navbar .navbar-brand {
     font-size: 25px;
     color: #192F57;

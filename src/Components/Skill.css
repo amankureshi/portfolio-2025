@@ -13,7 +13,7 @@
 .skills-heading {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #333;
+    color: #10103e;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -28,11 +28,10 @@
 
 .skills-card-container {
     flex: 1 1 200px;
-    /* Makes it responsive */
     max-width: 200px;
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .skills-card {

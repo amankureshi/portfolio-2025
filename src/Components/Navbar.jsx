@@ -6,7 +6,7 @@ import Resume from "../assets/aman-resume-2025.pdf";
 const Navbar = () => {
   return (
     <div className="nav-bg">
-      <div className="container">
+      <div className="container fixed-top">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
