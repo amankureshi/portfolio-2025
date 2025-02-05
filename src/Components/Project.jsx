@@ -184,7 +184,7 @@ export default function Project() {
 
   return (
     <div className="container tab-center text-center p-4" id="projects">
-      <h1>Projects</h1>
+      <h2>My Projects</h2>
       <div className="btn-group mb-4">
         {Object.keys(content).map((tab) => (
           <button

@@ -24,7 +24,7 @@ const HeroSection = () => {
                 target="_blank"
                 className="hundred-link text-decoration-none px-1"
               >
-                100-project
+                100-projects
               </a>
               challenge to expand my front-end development skills.
             </li>
