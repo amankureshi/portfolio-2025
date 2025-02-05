@@ -61,8 +61,7 @@ const content = {
     },
     {
       title: "Search Filter",
-      imageSrc:
-        "https://i.postimg.cc/Pq0MWXTx/Screenshot-2024-11-20-173241.png",
+      imageSrc: "https://i.postimg.cc/dtFfDkrR/search.jpg",
       sourceCodeLink:
         "https://github.com/amankureshi/100-projects-challenge/tree/main/day-01",
       visitPageLink: "https://search-filterday01.vercel.app/",
@@ -77,8 +76,7 @@ const content = {
     },
     {
       title: "Toast Notification",
-      imageSrc:
-        "https://i.postimg.cc/8cKrN4yY/Screenshot-2024-11-20-174347.png",
+      imageSrc: "https://i.postimg.cc/YqJh172x/tost.jpg",
       sourceCodeLink:
         "https://github.com/amankureshi/100-projects-challenge/tree/main/day-03",
       visitPageLink: "https://day-03.onrender.com/",
