@@ -9,12 +9,12 @@ import Skills from "./Components/Skills";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <HeroSection />
       <About />
-      <Skills />
+      <Skills /> */}
       <Project />
-      <ContactUs />
+      {/* <ContactUs /> */}
     </>
   );
 }
