@@ -174,19 +174,10 @@ const content = {
 
 export default function Project() {
   const [activeTab, setActiveTab] = useState("javascript");
-  const [loadingState, setLoadingState] = useState(
-    content.javascript.map(() => true)
-  );
+  const [loading, setLoading] = useState(true);
 
-  const handleImageLoad = (index) => {
-    const updatedLoadingState = [...loadingState];
-    updatedLoadingState[index] = false;
-    setLoadingState(updatedLoadingState);
-  };
-
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    setLoadingState(content[tab].map(() => true));
+  const handleImageLoad = () => {
+    setLoading(false);
   };
 
   return (
@@ -201,7 +192,7 @@ export default function Project() {
             className={`btn ${
               activeTab === tab ? "btn-primary active" : "btn-secondary"
             } btn-custom mt-4`}
-            onClick={() => handleTabChange(tab)}
+            onClick={() => setActiveTab(tab)}
           >
             {tab.toUpperCase()}
           </button>
@@ -213,7 +204,7 @@ export default function Project() {
           <div key={index} className="col">
             <div className="card">
               <h4 className="card-title pt-3 pb-2">{item.title}</h4>
-              {loadingState[index] && (
+              {loading && (
                 <div className="loader-container">
                   <img src={Loader} alt="Loading..." width="150" height="200" />
                 </div>
@@ -221,9 +212,9 @@ export default function Project() {
               <img
                 src={item.imageSrc}
                 alt={item.title}
-                onLoad={() => handleImageLoad(index)} // Handle image load for specific index
+                onLoad={handleImageLoad}
                 className="card-img-top"
-                style={{ display: loadingState[index] ? "none" : "block" }} // Show image only after it's loaded
+                style={{ display: loading ? "none" : "block" }}
               />
               <div className="card-body">
                 <div className="d-flex justify-content-between">
