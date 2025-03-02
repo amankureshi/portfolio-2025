@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { FaBluesky } from "react-icons/fa6";
-import Resume from "../assets/aman-resume-2025.pdf";
+import Resume from "../assets/aman-resume.pdf";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
