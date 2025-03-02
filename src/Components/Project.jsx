@@ -174,10 +174,19 @@ const content = {
 
 export default function Project() {
   const [activeTab, setActiveTab] = useState("javascript");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState([]);
 
-  const handleImageLoad = () => {
-    setLoading(false);
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setLoading(new Array(content[tab].length).fill(true));
+  };
+
+  const handleImageLoad = (index) => {
+    setLoading((prev) => {
+      const newLoading = [...prev];
+      newLoading[index] = false;
+      return newLoading;
+    });
   };
 
   return (
@@ -192,7 +201,7 @@ export default function Project() {
             className={`btn ${
               activeTab === tab ? "btn-primary active" : "btn-secondary"
             } btn-custom mt-4`}
-            onClick={() => setActiveTab(tab)}
+            onClick={() => handleTabChange(tab)}
           >
             {tab.toUpperCase()}
           </button>
@@ -204,7 +213,7 @@ export default function Project() {
           <div key={index} className="col">
             <div className="card">
               <h4 className="card-title pt-3 pb-2">{item.title}</h4>
-              {loading && (
+              {loading[index] && (
                 <div className="loader-container">
                   <img src={Loader} alt="Loading..." width="150" height="200" />
                 </div>
@@ -212,9 +221,9 @@ export default function Project() {
               <img
                 src={item.imageSrc}
                 alt={item.title}
-                onLoad={handleImageLoad}
+                onLoad={() => handleImageLoad(index)}
                 className="card-img-top"
-                style={{ display: loading ? "none" : "block" }}
+                style={{ display: loading[index] ? "none" : "block" }}
               />
               <div className="card-body">
                 <div className="d-flex justify-content-between">
