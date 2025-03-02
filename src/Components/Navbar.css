@@ -11,16 +11,6 @@
 }
 
 .navbar .navbar-brand {
-    font-size: 25px;
-    color: #192F57;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-}
-
-.navbar .navbar-brand {
     font-size: 10px;
     color: #F63EAA;
     font-weight: 600;
