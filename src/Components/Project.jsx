@@ -215,7 +215,7 @@ export default function Project() {
               <h4 className="card-title pt-3 pb-2">{item.title}</h4>
               {loading[index] && (
                 <div className="loader-container">
-                  <img src={Loader} alt="Loading..." width="150" height="200" />
+                  <img src={Loader} alt="Loading..." width="150" height="230" />
                 </div>
               )}
               <img
