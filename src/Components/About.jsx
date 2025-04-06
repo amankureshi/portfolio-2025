@@ -1,6 +1,8 @@
 import React from "react";
 import "./About.css";
-import aboutImage from "../assets/about-image.jpg";
+// import aboutImage from "../assets/about-image.jpg";
+import aboutImage from "../assets/image/8.jpg";
+
 const About = () => {
   return (
     <section id="about" className="about-section py-5 container">

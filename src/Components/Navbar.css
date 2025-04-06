@@ -78,7 +78,8 @@
 
 /* Logo-css */
 .navbar-brand .highlight {
-    color: #ffaa50;
+    /* color: #ffaa50; */
+    color: #cdba76;
     font-weight: bold;
     font-size: 20px;
     letter-spacing: 0.5px;

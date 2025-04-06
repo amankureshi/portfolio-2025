@@ -3,6 +3,7 @@ import "./HeroSection.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import useAOS from "../Hooks/useAos";
+import HeroImage from "../assets/image/Hero.jpg";
 
 const HeroSection = () => {
   useAOS();
@@ -62,10 +63,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="image-section" data-aos="fade-left">
-          <img
-            src="https://i.postimg.cc/YS0skTDb/aman-ps-1.jpg"
-            alt="Aman Kureshi Logo"
-          />
+          <img src={HeroImage} alt="Aman Kureshi Logo" />
         </div>
       </main>
     </div>
