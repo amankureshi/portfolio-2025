@@ -3,6 +3,7 @@ import "./ContactUs.css";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
 import { SiMinutemailer } from "react-icons/si";
+import { FaCodepen } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 
 const ContactUs = () => {
@@ -31,7 +32,7 @@ const ContactUs = () => {
             <p>amankureshi78692@gmail.com</p>
           </div>
           <div className="col-md-3">
-            <CiGlobe className="icon" />
+            <FaCodepen className="icon" />
             <p>
               <a className="text-decoration-none text-dark">amankureshi</a>
             </p>
