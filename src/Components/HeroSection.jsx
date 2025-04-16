@@ -39,8 +39,12 @@ const HeroSection = () => {
             <li>
               <GiTrophyCup />
               In my BCA, I achieved{" "}
-              <a href="" className="hundred-link text-decoration-none">
-                1st position
+              <a
+                href="https://drive.google.com/drive/u/0/folders/199jgstGOC2N0tlEhWH2CYvhw21M4c-04"
+                className="hundred-link text-decoration-none"
+                target="_blank"
+              >
+                1<sup>st</sup> position
               </a>{" "}
               in web design competitions during my 1st, 2nd, and 3rd years.
             </li>
