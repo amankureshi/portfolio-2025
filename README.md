@@ -50,5 +50,5 @@ You can view or download my resume [here](./src/assets/aman-resume.pdf).
 git clone https://github.com/amankureshi/react-portfolio.git
 cd react-portfolio
 npm install
-npm start
+npm run dev
 ```
