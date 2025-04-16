@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import useAOS from "../Hooks/useAos";
 import HeroImage from "../assets/image/Hero.jpg";
+import { GiTrophyCup } from "react-icons/gi";
 
 const HeroSection = () => {
   useAOS();
@@ -36,8 +37,12 @@ const HeroSection = () => {
               challenge to expand my front-end development skills.
             </li>
             <li>
-              In my BCA, I achieved 1st position in web design competitions
-              during my 1st, 2nd, and 3rd years.
+              <GiTrophyCup />
+              In my BCA, I achieved{" "}
+              <a href="" className="hundred-link text-decoration-none">
+                1st position
+              </a>{" "}
+              in web design competitions during my 1st, 2nd, and 3rd years.
             </li>
           </ul>
 

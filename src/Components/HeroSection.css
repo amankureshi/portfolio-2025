@@ -149,6 +149,79 @@ main {
     margin-bottom: 0.2rem;
 }
 
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(-15deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.hero-content li svg {
+    font-size: 2rem;
+    animation: swing 2s infinite ease-in-out;
+    color: #bb8f0c;
+}
+
+@keyframes shine {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.5);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.hero-content li svg {
+    font-size: 2rem;
+    animation: shine 2s infinite ease-in-out;
+    color: #7e651a;
+}
+
+@keyframes shine {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.5);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.hero-content li svg {
+    font-size: 2rem;
+    animation: shine 2s infinite ease-in-out;
+    color: #b9921e;
+}
+
+/* 
+.hero-content li svg {
+    font-size: 2rem;
+} */
+
 @media (max-width: 768px) {
     .hero-content {
         margin: 0;
