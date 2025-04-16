@@ -24,9 +24,10 @@ const About = () => {
               to expand my tech stack. I also have an extra interest in CSS.
             </p>
             <p className="about-text" data-aos="fade-left">
-              I won 1st place in my college's web design competition in both 1st
-              and 2nd year. These achievements helped me improve my skills,
-              boost my creativity, and gain good experience in web development.
+              I won 1st place in my college's web design competition in my 1st,
+              2nd, and 3rd years. These achievements strengthened my skills,
+              enhanced my creativity, and gave me valuable experience in web
+              development.
             </p>
           </div>
           <div className="col-md-6">
