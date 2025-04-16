@@ -40,7 +40,8 @@ const HeroSection = () => {
               <GiTrophyCup />
               In my BCA, I achieved{" "}
               <a
-                href="https://drive.google.com/drive/u/0/folders/199jgstGOC2N0tlEhWH2CYvhw21M4c-04"
+                href="https://drive.google.com/drive/folders/199jgstGOC2N0tlEhWH2CYvhw21M4c-04?usp=sharing"
+                rel="noopener noreferrer"
                 className="hundred-link text-decoration-none"
                 target="_blank"
               >
