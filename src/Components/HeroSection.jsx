@@ -36,8 +36,8 @@ const HeroSection = () => {
               challenge to expand my front-end development skills.
             </li>
             <li>
-              In my BCA , I achieved the 1st position in web design competitions
-              during both my 1st and 2nd years
+              In my BCA, I achieved 1st position in web design competitions
+              during my 1st, 2nd, and 3rd years.
             </li>
           </ul>
 
