@@ -94,10 +94,20 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="col-md-6">
-            <img
+            {/* <img
               src="https://i1.wp.com/ashwinishenoy.com/wp-content/uploads/2021/09/pexels-daria-shevtsova-930004-scaled-1.jpg?w=1920&ssl=1"
               alt="Contact-Image"
               className="shadow-sm Contact-Image"
+            /> */}
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.166461162304!2d72.26817767531735!3d23.141313379090676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c1f00137dc557%3A0xd84787db1be2b5cd!2sAman%20Kureshi!5e1!3m2!1sen!2sin!4v1744910514656!5m2!1sen!2sin"
+              width="600"
+              height="565"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
