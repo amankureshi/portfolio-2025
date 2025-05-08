@@ -45,10 +45,21 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link
                     className="nav-link text-dark"
+                    to="projects"
+                    smooth={true}
+                    duration={100}
+                    offset={-50}
+                  >
+                    Project
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link text-dark"
                     to="about"
                     smooth={true}
                     duration={100}
-                    offset={-80}
+                    offset={-50}
                   >
                     About
                   </Link>
@@ -59,19 +70,9 @@ const Navbar = () => {
                     to="skill_section"
                     smooth={true}
                     duration={100}
+                    offset={-50}
                   >
                     Skills
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link text-dark "
-                    to="projects"
-                    smooth={true}
-                    duration={100}
-                    offset={-80}
-                  >
-                    Projects
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -80,7 +81,7 @@ const Navbar = () => {
                     to="contact"
                     smooth={true}
                     duration={100}
-                    offset={-80}
+                    offset={-50}
                   >
                     Contact us
                   </Link>
