@@ -50,7 +50,7 @@ const Navbar = () => {
                     duration={100}
                     offset={-50}
                   >
-                    Project
+                    Projects
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -88,15 +88,14 @@ const Navbar = () => {
                 </li>
               </ul>
               <form className="d-flex">
-                <button className="btn resume-btn" type="submit">
-                  <a
-                    href={Resume}
-                    className="text-decoration-none text-white"
-                    target="_blank"
-                  >
-                    Resume
-                  </a>
-                </button>
+                <a
+                  type="submit"
+                  href={Resume}
+                  className=" btn resume-btn text-decoration-none text-white"
+                  target="_blank"
+                >
+                  Resume
+                </a>
               </form>
             </div>
           </div>
