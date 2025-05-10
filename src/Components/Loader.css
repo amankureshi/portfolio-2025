@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+.loader-center {
     min-height: 100vh;
     display: grid;
     place-items: center;

@@ -10,7 +10,7 @@ const HeroSection = () => {
   useAOS();
   return (
     <div
-      className="hero-bg  d-flex justify-content-center align-items-center"
+      className="hero-bg d-flex justify-content-center align-items-center"
       id="home"
       to="home"
     >
