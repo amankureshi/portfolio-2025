@@ -40,8 +40,7 @@ const Skills = () => {
       name: "GitHub",
     },
     {
-      imageSrc:
-        "https://static-00.iconduck.com/assets.00/vercel-icon-512x449-3422jidz.png",
+      imageSrc: "https://icon.icepanel.io/Technology/png-shadow-512/Vercel.png",
       name: "Vercel",
     },
   ];
