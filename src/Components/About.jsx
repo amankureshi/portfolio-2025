@@ -13,10 +13,10 @@ const About = () => {
               About Me
             </h2>
             <p className="about-text" data-aos="fade-left">
-              Hi, I’m Aman Kureshi, a frontend developer currently studying BCA
-              (Bachelor of Computer Applications) in the 6th semester. I have a
-              strong interest in creating interactive and user-friendly web
-              applications.
+              Hi, I'm Aman Kureshi — a passionate Frontend Developer with a
+              completed BCA from KSV University. I love building clean,
+              responsive, and user-friendly web interfaces that make a real
+              impact.
             </p>
             <p className="about-text" data-aos="fade-left">
               I am a Frontend Developer.I love creating beautifull, usefull
