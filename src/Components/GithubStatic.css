@@ -1,7 +1,53 @@
+.github-section {
+    padding: 50px 20px;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #10103e;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contribution-chart {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 .github-img {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px #0000001a;
-    filter: hue-rotate(9deg) saturate(2);
     padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    filter: hue-rotate(343deg) saturate(2);
+}
+
+.github-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.github-card {
+    width: 100%;
+    max-width: 490px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.github-card2 {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
