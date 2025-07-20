@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { FaBluesky } from "react-icons/fa6";
-import Resume from "../assets/Aman_Frontend_Developer_resume.pdf";
+import Resume from "../assets/Aman_Frontend_resume.pdf";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -73,6 +73,17 @@ const Navbar = () => {
                     offset={-50}
                   >
                     Skills
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link text-dark"
+                    to="statics_section"
+                    smooth={true}
+                    duration={100}
+                    offset={-50}
+                  >
+                    Statics
                   </Link>
                 </li>
                 <li className="nav-item">
