@@ -7,6 +7,7 @@ import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import Project from "./Components/Project";
 import Skills from "./Components/Skills";
+import GithubStatic from "./Components/GithubStatic";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
       <Project />
       <About />
       <Skills />
+      <GithubStatic />
       <ContactUs />
     </>
   );
