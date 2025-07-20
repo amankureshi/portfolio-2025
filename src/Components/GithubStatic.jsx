@@ -3,7 +3,7 @@ import "./GithubStatic.css";
 
 const GithubStatic = () => {
   return (
-    <div className="github-section">
+    <div className="github-section" id="statics_section">
       <h2
         className="section-title text-center"
         data-aos="fade-up"
