@@ -20,11 +20,13 @@ const GithubStatic = () => {
         />
       </div>
       <div className="github-cards">
-        <img
-          src="https://streak-stats.demolab.com?user=amankureshi&theme=vision-friendly-dark&card_width=460"
-          alt="GitHub Streak"
-          className="github-card"
-        />
+        <a href="https://git.io/streak-stats">
+          <img
+            src="https://github-readme-streak-stats-seven-flame.vercel.app?user=amankureshi&theme=vision-friendly-dark&card_width=500&card_height=210"
+            alt="GitHub Streak"
+            className="github-card"
+          />
+        </a>
         <img
           src="https://github-readme-stats.vercel.app/api/top-langs?username=amankureshi&show_icons=true&locale=en&layout=compact&theme=highcontrast"
           alt="Top Languages"
