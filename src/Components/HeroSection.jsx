@@ -52,24 +52,24 @@ const HeroSection = () => {
           </ul>
 
           <div className="hero-button">
-            <button className="hero-btn">
-              <a
-                href="https://github.com/amankureshi"
-                target="_blank"
-                className="text-decoration-none text-white"
-              >
+            <a
+              href="https://github.com/amankureshi"
+              target="_blank"
+              className="text-decoration-none"
+            >
+              <button className="hero-btn text-white">
                 Github <FaGithub />
-              </a>
-            </button>
-            <button className="hero-btn">
-              <a
-                href="https://www.linkedin.com/in/aman-kureshi/"
-                target="_blank"
-                className="text-decoration-none text-white"
-              >
+              </button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aman-kureshi/"
+              target="_blank"
+              className="text-decoration-none"
+            >
+              <button className="hero-btn text-white">
                 Linkedin <FaLinkedin />
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
         <div className="image-section" data-aos="fade-left">
