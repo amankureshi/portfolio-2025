@@ -35,7 +35,7 @@ You can view my competition certificates here:
 
 ## 📃 Resume
 
-You can view or download my resume [here](./src/assets/aman-resume.pdf).
+You can view or download my resume [here](./src/assets/Aman_Frontend_Resume.pdf).
 
 ## 🔗 Social Links
 
