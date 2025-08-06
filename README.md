@@ -41,6 +41,7 @@ You can view or download my resume [here](./src/assets/Aman_Frontend_Resume.pdf)
 
 - [LinkedIn](linkedin.com/in/aman-kureshi/)
 - [GitHub](https://github.com/amankureshi)
+- [Codepen](https://codepen.io/amankureshi786)
 
 ---
 
