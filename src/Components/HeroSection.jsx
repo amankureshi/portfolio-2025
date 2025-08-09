@@ -3,7 +3,7 @@ import "./HeroSection.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import useAOS from "../Hooks/useAos";
-import HeroImage from "../assets/image/Hero.jpg";
+import HeroImage from "../assets/image/Hero-bg.jpg";
 import { GiTrophyCup } from "react-icons/gi";
 
 const HeroSection = () => {
