@@ -1,10 +1,11 @@
 import React from "react";
 import "./HeroSection.css";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import Resume from "../assets/Aman_Frontend_Resume.pdf";
 import useAOS from "../Hooks/useAos";
 import HeroImage from "../assets/image/Hero-bg.jpg";
 import { GiTrophyCup } from "react-icons/gi";
+import { FiDownload } from "react-icons/fi";
+import { FaPaperPlane } from "react-icons/fa";
 
 const HeroSection = () => {
   useAOS();
@@ -51,24 +52,20 @@ const HeroSection = () => {
             </li>
           </ul>
 
-          <div className="hero-button">
+          <div class="d-inline-flex gap-1">
+            <a
+              href={Resume}
+              className="btn btn-dark text-white px-4 py-3 lh-1 resume-btn"
+              target="_blank"
+            >
+              Resume <FiDownload />
+            </a>
             <a
               href="https://github.com/amankureshi"
               target="_blank"
-              className="text-decoration-none"
+              className="btn btn-dark text-white px-4 py-3 lh-1 resume-btn"
             >
-              <button className="hero-btn text-white">
-                Github <FaGithub />
-              </button>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/aman-kureshi/"
-              target="_blank"
-              className="text-decoration-none"
-            >
-              <button className="hero-btn text-white">
-                Linkedin <FaLinkedin />
-              </button>
+              Contact Us <FaPaperPlane />
             </a>
           </div>
         </div>
