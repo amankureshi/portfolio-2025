@@ -6,6 +6,7 @@ import HeroImage from "../assets/image/Hero-bg.jpg";
 import { GiTrophyCup } from "react-icons/gi";
 import { FiDownload } from "react-icons/fi";
 import { FaPaperPlane } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   useAOS();
@@ -60,12 +61,16 @@ const HeroSection = () => {
             >
               <FiDownload class="me-2" /> Resume
             </a>
-            <a
+            <Link
+              to="contact"
+              smooth={true}
+              duration={100}
+              offset={-50}
               target="_blank"
               class="btn contact-btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
             >
               <FaPaperPlane class="me-2" /> Contact Us
-            </a>
+            </Link>
           </div>
         </div>
         <div className="image-section" data-aos="fade-left">

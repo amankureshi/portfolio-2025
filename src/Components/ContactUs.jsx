@@ -4,7 +4,6 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdCall } from "react-icons/md";
 import { SiMinutemailer } from "react-icons/si";
 import { FaCodepen } from "react-icons/fa";
-import { CiGlobe } from "react-icons/ci";
 
 const ContactUs = () => {
   return (
