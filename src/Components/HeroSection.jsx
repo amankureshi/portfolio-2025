@@ -58,13 +58,13 @@ const HeroSection = () => {
               class="btn btn-dark text-white px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
               target="_blank"
             >
-              Resume <FiDownload class="ms-2" />
+              <FiDownload class="me-2" /> Resume
             </a>
             <a
               target="_blank"
               class="btn contact-btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
             >
-              Contact Us <FaPaperPlane class="ms-2" />
+              <FaPaperPlane class="me-2" /> Contact Us
             </a>
           </div>
         </div>
