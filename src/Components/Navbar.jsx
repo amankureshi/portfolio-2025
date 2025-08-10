@@ -1,7 +1,6 @@
 import React from "react";
 import "./Navbar.css";
 import { FaBluesky } from "react-icons/fa6";
-import Resume from "../assets/Aman_Frontend_Resume.pdf";
 import { Link } from "react-scroll";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -102,22 +101,25 @@ const Navbar = () => {
                 </li>
               </ul>
 
-              <div className="d-flex gap-2 h5 mt-1">
+              <div className="d-flex gap-2 h6 mt-1">
                 <a
                   href="https://github.com/amankureshi"
                   className="text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
+                  target="_blank"
                 >
                   <FaGithub />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/aman-kureshi/"
                   className="text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
+                  target="_blank"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   href="https://codepen.io/amankureshi786"
                   className="text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
+                  target="_blank"
                 >
                   <FaCodepen />
                 </a>
