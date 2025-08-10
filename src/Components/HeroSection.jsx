@@ -52,20 +52,19 @@ const HeroSection = () => {
             </li>
           </ul>
 
-          <div class="d-inline-flex gap-1">
+          <div class="d-inline-flex">
             <a
               href={Resume}
-              className="btn btn-dark text-white px-4 py-3 lh-1 resume-btn"
+              class="btn btn-dark text-white px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
               target="_blank"
             >
-              Resume <FiDownload />
+              Resume <FiDownload class="ms-2" />
             </a>
             <a
-              href="https://github.com/amankureshi"
               target="_blank"
-              className="btn btn-dark text-white px-4 py-3 lh-1 resume-btn"
+              class="btn contact-btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
             >
-              Contact Us <FaPaperPlane />
+              Contact Us <FaPaperPlane class="ms-2" />
             </a>
           </div>
         </div>
