@@ -81,29 +81,32 @@ main {
     gap: 1rem;
 }
 
-.hero-btn {
-    background-color: #005;
-    display: inline-block;
-    outline: 0;
-    cursor: pointer;
-    border: none;
-    padding: 0 2.2rem;
-    line-height: 45px;
-    border-radius: 7px;
-    font-weight: 400;
-    font-size: 16px;
-    box-shadow: 0 4px 14px 0 rgb(0 0 0 / 10%);
-    transition: background 0.2s ease,
-        color 0.2s ease,
-        box-shadow 0.2s ease;
+.resume-btn {
+    font-weight: 600;
+    border-radius: 3px;
+    border: 0;
+    color: #fff;
+    background: #000a47;
+    transition: all 0.2s ease-in-out;
 }
 
+.resume-btn:hover {
+    background-color: #fb9e53;
+}
 
-.hero-btn:hover {
-    background-color: transparent;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 6px 20px rgb(93 93 93 / 23%);
-    color: #101010 !important;
+.contact-btn {
+    font-weight: 600;
+    border-radius: 3px;
+    border: 2px solid #000a47;
+    color: #000a47;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.contact-btn:hover {
+    background-color: #fb9e53;
+    border-color: #fb9e53;
+    color: #fff;
 }
 
 .hero-btn a {
