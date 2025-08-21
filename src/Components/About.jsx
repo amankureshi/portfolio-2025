@@ -26,7 +26,7 @@ const About = () => {
               <li
                 className="about-text"
                 data-aos="fade-left"
-                data-aos-offset="300"
+                data-aos-offset="200"
                 data-aos-duration="600"
               >
                 I am a Frontend Developer. I love creating beautiful, useful
@@ -36,7 +36,7 @@ const About = () => {
               </li>
               <li
                 data-aos="fade-left"
-                data-aos-offset="400"
+                data-aos-offset="200"
                 data-aos-duration="800"
               >
                 I won 1st place in my college's web design competition in my
