@@ -13,10 +13,10 @@ const About = () => {
             </h2>
             <ul className="about-text-list">
               <li
-                className="about-text"
-                data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-duration="400"
+              // className="about-text"
+              // data-aos="fade-left"
+              // data-aos-offset="200"
+              // data-aos-duration="400"
               >
                 Hi, I'm Aman Kureshi — a passionate Frontend Developer with a
                 completed BCA from KSV University. I love building clean,
@@ -24,10 +24,10 @@ const About = () => {
                 impact.
               </li>
               <li
-                className="about-text"
-                data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-duration="600"
+              // className="about-text"
+              // data-aos="fade-left"
+              // data-aos-offset="200"
+              // data-aos-duration="600"
               >
                 I am a Frontend Developer. I love creating beautiful, useful
                 websites. I am always open to learn new technologies. I always
@@ -35,9 +35,9 @@ const About = () => {
                 CSS.
               </li>
               <li
-                data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-duration="800"
+              // data-aos="fade-left"
+              // data-aos-offset="200"
+              // data-aos-duration="800"
               >
                 I won 1st place in my college's web design competition in my
                 1st, 2nd, and 3rd years. These achievements strengthened my
