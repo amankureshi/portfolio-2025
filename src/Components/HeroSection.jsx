@@ -53,13 +53,13 @@ const HeroSection = () => {
             </li>
           </ul>
 
-          <div class="d-inline-flex">
+          <div className="d-inline-flex">
             <a
               href={Resume}
-              class="btn btn-dark text-white px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
+              className="btn btn-dark text-white px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
               target="_blank"
             >
-              <FiDownload class="me-2" /> Resume
+              <FiDownload className="me-2" /> Resume
             </a>
             <Link
               to="contact"
@@ -67,9 +67,9 @@ const HeroSection = () => {
               duration={100}
               offset={-50}
               target="_blank"
-              class="btn contact-btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
+              className="btn contact-btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
             >
-              <FaPaperPlane class="me-2" /> Contact Us
+              <FaPaperPlane className="me-2" /> Contact Us
             </Link>
           </div>
         </div>
