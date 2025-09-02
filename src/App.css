@@ -10,7 +10,33 @@ body {
     overflow-x: hidden;
 }
 
-.nav-bg,
-.hero-content {
-    background-color: #F5FAFD;
+
+.app {
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.app.dark-mode {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+.dark-mode-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 5.2rem;
+    z-index: 9999;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    background: #555;
 }
