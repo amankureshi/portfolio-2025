@@ -18,7 +18,7 @@ body {
 }
 
 .app.dark-mode {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-color: #202022;
     color: #ffffff;
 }
 
@@ -39,4 +39,22 @@ body {
 
 .dark-mode-btn:hover {
     background: #555;
+}
+
+/* Hero Section Dark Mode */
+.app.dark-mode .hero-bg {
+    background-color: #202022 !important;
+    color: #ffffff !important;
+}
+
+/* Skills Section Dark Mode */
+.app.dark-mode .skills-section {
+    background-color: #202022 !important;
+    color: #ffffff !important;
+}
+
+/* Contact Section Dark Mode */
+.app.dark-mode .contact-section {
+    background-color: #202022 !important;
+    color: #ffffff !important;
 }
