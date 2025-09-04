@@ -6,7 +6,7 @@ import { SiMinutemailer } from "react-icons/si";
 
 const ContactUs = () => {
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
       <div className="container">
         <h2 className="section-title text-center" data-aos="fade-up">
           Get in Touch
