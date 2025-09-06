@@ -6,13 +6,18 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaCodepen } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ darkMode }) => {
   return (
-    <div className="nav-bg">
+    <div className={darkMode ? "nav-bg dark-mode" : "nav-bg"}>
       <div className="container fixed-top">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <a
+              className={`navbar-brand ${
+                darkMode ? "text-white" : "text-dark"
+              }`}
+              href="#"
+            >
               <div className="highlight">AMAN</div>
               <FaBluesky className="fly-icon" />
               <div className="name">KURESHI</div>
@@ -35,8 +40,9 @@ const Navbar = () => {
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ">
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-dark  active "
-                    aria-current="page"
+                    className={`nav-link ${
+                      darkMode ? "text-white" : "text-dark"
+                    }`}
                     to="home"
                     smooth={true}
                     duration={100}
@@ -46,7 +52,9 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-dark"
+                    className={`nav-link ${
+                      darkMode ? "text-white" : "text-dark"
+                    }`}
                     to="projects"
                     smooth={true}
                     duration={100}
@@ -57,7 +65,9 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-dark"
+                    className={`nav-link ${
+                      darkMode ? "text-white" : "text-dark"
+                    }`}
                     to="about"
                     smooth={true}
                     duration={100}
@@ -68,7 +78,9 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-dark"
+                    className={`nav-link ${
+                      darkMode ? "text-white" : "text-dark"
+                    }`}
                     to="skill_section"
                     smooth={true}
                     duration={100}
@@ -79,7 +91,9 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="nav-link text-dark"
+                    className={`nav-link ${
+                      darkMode ? "text-white" : "text-dark"
+                    }`}
                     to="statics_section"
                     smooth={true}
                     duration={100}
@@ -89,15 +103,19 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link text-dark"
-                    to="contact"
-                    smooth={true}
-                    duration={100}
-                    offset={-50}
-                  >
-                    Contact us
-                  </Link>
+                  <li className="nav-item">
+                    <Link
+                      className={`nav-link ${
+                        darkMode ? "text-white" : "text-dark"
+                      }`}
+                      to="contact"
+                      smooth={true}
+                      duration={100}
+                      offset={-50}
+                    >
+                      Contact us
+                    </Link>
+                  </li>
                 </li>
               </ul>
 
