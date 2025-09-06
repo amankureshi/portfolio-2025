@@ -18,7 +18,7 @@ body {
 }
 
 .app.dark-mode {
-    background-color: #202022;
+    background-color: #0B0E18;
     color: #ffffff;
 }
 
@@ -43,18 +43,18 @@ body {
 
 /* Hero Section Dark Mode */
 .app.dark-mode .hero-bg {
-    background-color: #202022 !important;
+    background-color: #0B0E18 !important;
     color: #ffffff !important;
 }
 
 /* Skills Section Dark Mode */
 .app.dark-mode .skills-section {
-    background-color: #202022 !important;
+    background-color: #0B0E18 !important;
     color: #ffffff !important;
 }
 
 /* Contact Section Dark Mode */
 .app.dark-mode .contact-section {
-    background-color: #202022 !important;
+    background-color: #0B0E18 !important;
     color: #ffffff !important;
 }
