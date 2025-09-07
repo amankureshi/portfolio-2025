@@ -12,15 +12,12 @@ const Navbar = ({ darkMode }) => {
       <div className="container fixed-top">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container-fluid">
-            <a
-              className={`navbar-brand ${
-                darkMode ? "text-white" : "text-dark"
-              }`}
-              href="#"
-            >
+            <a className="navbar-brand" href="#">
               <div className="highlight">AMAN</div>
               <FaBluesky className="fly-icon" />
-              <div className="name">KURESHI</div>
+              <div className={`name ${darkMode ? "text-white" : "text-dark"}`}>
+                KURESHI
+              </div>
             </a>
             <button
               className="navbar-toggler"

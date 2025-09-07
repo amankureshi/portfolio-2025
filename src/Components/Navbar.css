@@ -13,7 +13,6 @@
 
 .navbar .navbar-brand {
     font-size: 10px;
-    color: #F63EAA;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -22,6 +21,7 @@
 }
 
 .fly-icon {
+    color: #F63EAA;
     font-size: 2rem;
     transition: transform 2s ease, opacity 2s ease;
 }
@@ -119,8 +119,6 @@ ul a:hover {
 .nav-link:hover::after {
     width: 100%;
 }
-
-
 
 .navbar-light .navbar-toggler {
     border-color: transparent;
