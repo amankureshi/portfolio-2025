@@ -44,7 +44,11 @@ body {
 /* Hero Section Dark Mode */
 .app.dark-mode .hero-bg {
     background-color: #0B0E18 !important;
-    color: #ffffff !important;
+    color: #fdf8ed !important;
+}
+
+.app.app.dark-mode .hero-bg h3 {
+    color: rgb(236, 250, 247);
 }
 
 /* Skills Section Dark Mode */
