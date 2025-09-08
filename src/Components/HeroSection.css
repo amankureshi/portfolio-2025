@@ -81,6 +81,7 @@ main {
     gap: 1rem;
 }
 
+/* Default Light Mode */
 .resume-btn {
     font-weight: 600;
     border-radius: 3px;
@@ -92,6 +93,7 @@ main {
 
 .resume-btn:hover {
     background-color: #fb9e53;
+    color: #fff;
 }
 
 .contact-btn {
@@ -107,6 +109,30 @@ main {
     background-color: #fb9e53;
     border-color: #fb9e53;
     color: #fff;
+}
+
+/* Stylish for Dark/Light mode buttons */
+
+.app.dark-mode .dark-resume-btn {
+    background: #1f2937;
+    color: #B09061;
+    border: 1px solid #B09061;
+}
+
+.app.dark-mode .dark-resume-btn:hover {
+    background-color: #63655d;
+    color: #ffffff;
+}
+
+.app.dark-mode .dark-contact-btn {
+    border-color: #CDBA76;
+    color: #B09061;
+}
+
+.app.dark-mode .dark-contact-btn:hover {
+    background-color: #63655d;
+    border-color: #B09061;
+    color: #ffffff;
 }
 
 .hero-btn a {
