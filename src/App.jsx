@@ -31,7 +31,7 @@ function App() {
       </button>
 
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <HeroSection />
+      <HeroSection darkMode={darkMode} />
       <Project />
       <About />
       <Skills />
