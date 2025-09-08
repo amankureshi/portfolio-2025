@@ -8,7 +8,7 @@ import { FiDownload } from "react-icons/fi";
 import { FaPaperPlane } from "react-icons/fa";
 import { Link } from "react-scroll";
 
-const HeroSection = () => {
+const HeroSection = ({ darkMode }) => {
   useAOS();
   return (
     <div
@@ -56,18 +56,23 @@ const HeroSection = () => {
           <div className="d-inline-flex">
             <a
               href={Resume}
-              className="btn btn-dark text-white px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
+              className={`btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn ${
+                darkMode ? "dark-resume-btn" : ""
+              }`}
               target="_blank"
             >
               <FiDownload className="me-2" /> Resume
             </a>
+
             <Link
               to="contact"
               smooth={true}
               duration={100}
               offset={-50}
               target="_blank"
-              className="btn contact-btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn"
+              className={`btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn contact-btn ${
+                darkMode ? "dark-contact-btn" : ""
+              }`}
             >
               <FaPaperPlane className="me-2" /> Contact Us
             </Link>
