@@ -11,7 +11,10 @@ const About = ({ darkMode }) => {
       <div className="container-fluid">
         <div className="row text-center image-reverse">
           <div className="col-md-6">
-            <h2 className="section-title" data-aos="fade-up">
+            <h2
+              data-aos="fade-up"
+              className={`section-title ${darkMode ? "text-light" : ""}`}
+            >
               About Me
             </h2>
             <ul className="about-text-list">
