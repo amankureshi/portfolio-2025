@@ -2,9 +2,12 @@ import React from "react";
 import "./About.css";
 import aboutImage from "../assets/image/about-image.jpg";
 
-const About = () => {
+const About = ({ darkMode }) => {
   return (
-    <section id="about" className="about-section py-5 container">
+    <section
+      id="about"
+      className={`py-5 container ${darkMode ? "text-light" : ""}`}
+    >
       <div className="container-fluid">
         <div className="row text-center image-reverse">
           <div className="col-md-6">
