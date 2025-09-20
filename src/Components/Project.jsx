@@ -172,7 +172,7 @@ const content = {
   ],
 };
 
-export default function Project() {
+export default function Project({ darkMode }) {
   const [activeTab, setActiveTab] = useState("javascript");
   const [loading, setLoading] = useState([]);
 
@@ -190,17 +190,32 @@ export default function Project() {
   };
 
   return (
-    <div className="container tab-center text-center p-4" id="projects">
-      <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div
+      className={`container tab-center text-center p-4 ${
+        darkMode ? " text-light" : ""
+      }`}
+      id="projects"
+    >
+      <h2
+        className={` ${darkMode ? "text-light" : ""}`}
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
         My Projects
       </h2>
       <div className="btn-group mb-4">
         {Object.keys(content).map((tab) => (
           <button
             key={tab}
-            className={`btn ${
-              activeTab === tab ? "btn-primary active" : "btn-secondary"
-            } btn-custom mt-4`}
+            className={`btn btn-custom mt-4 ${
+              activeTab === tab
+                ? darkMode
+                  ? "btn-warning active"
+                  : "btn-primary active"
+                : darkMode
+                ? "btn-outline-light"
+                : "btn-secondary"
+            }`}
             onClick={() => handleTabChange(tab)}
           >
             {tab.toUpperCase()}
@@ -211,7 +226,7 @@ export default function Project() {
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {content[activeTab].map((item, index) => (
           <div key={index} className="col">
-            <div className="card">
+            <div className={`card ${darkMode ? "dark-card" : ""}`}>
               <h4 className="card-title pt-3 pb-2">{item.title}</h4>
               {loading[index] && (
                 <div className="loader-container">
@@ -230,14 +245,18 @@ export default function Project() {
                   <a
                     href={item.sourceCodeLink}
                     target="_blank"
-                    className="btn btn-link text-warning"
+                    className={`btn btn-link ${
+                      darkMode ? "dark-btn-link" : "text-warning"
+                    }`}
                   >
                     Source Code
                   </a>
                   <a
                     href={item.visitPageLink}
                     target="_blank"
-                    className="btn btn-link text-warning"
+                    className={`btn btn-link ${
+                      darkMode ? "dark-btn-link" : "text-warning"
+                    }`}
                   >
                     Visit Page
                   </a>
