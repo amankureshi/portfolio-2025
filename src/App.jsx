@@ -32,7 +32,7 @@ function App() {
 
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <HeroSection darkMode={darkMode} />
-      <Project />
+      <Project darkMode={darkMode} />
       <About darkMode={darkMode} />
       <Skills />
       <GithubStatic />
