@@ -74,3 +74,23 @@
         font-size: 13px;
     }
 }
+
+/* Dark mode card */
+.dark-card {
+    background-color: #1f2937 !important;
+    color: #f9fafb !important;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
+    border: 1px solid #374151;
+}
+
+.dark-btn-link {
+    border: 2px solid #CDBA76 !important;
+    color: #CDBA76 !important;
+    text-decoration: none;
+    border-radius: 5px !important;
+}
+
+.dark-btn-link:hover {
+    background-color: #CDBA76 !important;
+    color: #1f2937 !important;
+}
