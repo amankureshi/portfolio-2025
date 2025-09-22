@@ -1,7 +1,7 @@
 import React from "react";
 import "./Skill.css";
 
-const Skills = () => {
+const Skills = ({ darkMode }) => {
   const data = [
     {
       imageSrc: "https://mahin.vercel.app/svgs/HTML_icon.svg",
@@ -49,7 +49,7 @@ const Skills = () => {
     <section className="skills-section" id="skill_section" to="skill_section">
       <div className="skills-container">
         <h2
-          className="skills-heading"
+          className={`${darkMode ? "text-light" : ""} skills-heading`}
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         >
