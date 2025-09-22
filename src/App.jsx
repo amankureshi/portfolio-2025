@@ -34,7 +34,7 @@ function App() {
       <HeroSection darkMode={darkMode} />
       <Project darkMode={darkMode} />
       <About darkMode={darkMode} />
-      <Skills />
+      <Skills darkMode={darkMode} />
       <GithubStatic />
       <ContactUs />
     </div>
