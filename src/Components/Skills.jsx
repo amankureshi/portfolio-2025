@@ -46,7 +46,11 @@ const Skills = ({ darkMode }) => {
   ];
 
   return (
-    <section className="skills-section" id="skill_section" to="skill_section">
+    <section
+      className={`skills-section ${darkMode ? "bg-dark text-light" : ""}`}
+      id="skill_section"
+      to="skill_section"
+    >
       <div className="skills-container">
         <h2
           className={`${darkMode ? "text-light" : ""} skills-heading`}
@@ -57,15 +61,26 @@ const Skills = ({ darkMode }) => {
         </h2>
         <div className="skills-row container">
           {data.map((item, index) => (
-            <div className="skills-card-container" key={index}>
-              <div className="skills-card">
+            <div
+              className={`skills-card-container ${
+                darkMode ? "skills-card-dark" : ""
+              }`}
+              key={index}
+            >
+              <div className={`skills-card ${darkMode ? "dark-bg" : ""}`}>
                 <img
                   src={item.imageSrc}
                   className="skills-card-image"
                   alt={item.name}
                 />
                 <div className="skills-card-body">
-                  <h5 className="skills-card-title">{item.name}</h5>
+                  <h5
+                    className={`skills-card-title ${
+                      darkMode ? "text-light" : "text-dark"
+                    }`}
+                  >
+                    {item.name}
+                  </h5>
                 </div>
               </div>
             </div>
