@@ -75,6 +75,19 @@
     color: #000055;
 }
 
+/* Dark mode ke liye skills card */
+.skills-card-dark {
+    background-color: #1e1e2f;
+    /* thoda dark shade */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+.skills-card-dark .skills-card-title {
+    color: #f8f9fa;
+}
+
+
 /* Make the layout responsive */
 @media (max-width: 768px) {
     .skills-card-container {
