@@ -76,9 +76,13 @@
 }
 
 .skills-card-dark {
-    background-color: #1e1e2f;
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: transparent;
+}
+
+.skills-row .dark-bg {
+    background-color: rgb(55, 54, 58);
 }
 
 .skills-card-dark .skills-card-title {
