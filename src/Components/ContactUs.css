@@ -125,6 +125,70 @@
     border-radius: 8px;
 }
 
+/* 🌙 Dark Mode Styles */
+.dark-mode .contact-section {
+    background: #0d1117;
+    color: #e6edf3;
+}
+
+.dark-mode .section-title {
+    color: #f5f5f5;
+}
+
+.dark-mode .info-box {
+    background: #161b22;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .info-box .icon {
+    background-color: #c9a227;
+    color: #0d1117;
+}
+
+.dark-mode .info-box h5 {
+    color: #ffffff;
+}
+
+.dark-mode .info-box p,
+.dark-mode .info-box a {
+    color: #c9d1d9;
+}
+
+.dark-mode .form-container {
+    background: #161b22;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .form-container h4 {
+    color: #f5f5f5;
+}
+
+.dark-mode .form-container input,
+.dark-mode .form-container textarea {
+    background-color: #0d1117;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+}
+
+.dark-mode .form-container input::placeholder,
+.dark-mode .form-container textarea::placeholder {
+    color: #8b949e;
+}
+
+.dark-mode .form-container button {
+    background-color: #c9a227;
+    color: #0d1117;
+}
+
+.dark-mode .form-container button:hover {
+    background-color: #e0b84d;
+}
+
+.dark-mode .image-container img {
+    opacity: 0.9;
+    border: 2px solid #30363d;
+}
+
 @media (max-width: 768px) {
     .contact-info {
         flex-direction: column;
