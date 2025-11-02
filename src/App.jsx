@@ -36,7 +36,7 @@ function App() {
       <About darkMode={darkMode} />
       <Skills darkMode={darkMode} />
       <GithubStatic darkMode={darkMode} />
-      <ContactUs />
+      <ContactUs darkMode={darkMode} />
     </div>
   );
 }
