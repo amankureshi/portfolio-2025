@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
-import Resume from "../assets/Aman_Frontend_Developer_Resume.pdf";
+import Resume from "../assets/Resume/Aman_Kureshi_Frontend_Developer_Resume.pdf";
 import useAOS from "../Hooks/useAos";
 import HeroImage from "../assets/image/Hero-bg.jpg";
 import { GiTrophyCup } from "react-icons/gi";
