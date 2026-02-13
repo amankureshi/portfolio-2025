@@ -2,7 +2,7 @@ import React from "react";
 import "./HeroSection.css";
 import Resume from "../assets/Resume/Aman_Kureshi_Frontend_Developer_Resume.pdf";
 import useAOS from "../Hooks/useAos";
-import HeroImage from "../assets/image/Hero-bg.jpg";
+import HeroImage from "../assets/image/aman_hero.jpg";
 import { GiTrophyCup } from "react-icons/gi";
 import { FiDownload } from "react-icons/fi";
 import { FaPaperPlane } from "react-icons/fa";
