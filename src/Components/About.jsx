@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import aboutImage from "../assets/image/about-image.jpg";
+import aboutImage from "../assets/image/about_Image.jpg";
 
 const About = ({ darkMode }) => {
   return (
