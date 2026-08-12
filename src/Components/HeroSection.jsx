@@ -1,8 +1,8 @@
 import React from "react";
 import "./HeroSection.css";
-import Resume from "../assets/Resume/Aman_Kureshi_ReactJS_Developer_Resume.pdf";
+import Resume from "../assets/Resume/Aman_Kureshi_Frontend_Developer_Resume.pdf";
 import useAOS from "../Hooks/useAos";
-import HeroImage from "../assets/image/aman_hero.png";
+import HeroImage from "../assets/image/aman_2.png";
 import { GiTrophyCup } from "react-icons/gi";
 import { FiDownload } from "react-icons/fi";
 import { FaPaperPlane } from "react-icons/fa";
@@ -56,9 +56,8 @@ const HeroSection = ({ darkMode }) => {
           <div className="d-inline-flex">
             <a
               href={Resume}
-              className={`btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn ${
-                darkMode ? "dark-resume-btn" : ""
-              }`}
+              className={`btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn ${darkMode ? "dark-resume-btn" : ""
+                }`}
               target="_blank"
             >
               <FiDownload className="me-2" /> Resume
@@ -70,9 +69,8 @@ const HeroSection = ({ darkMode }) => {
               duration={100}
               offset={-50}
               target="_blank"
-              className={`btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn contact-btn ${
-                darkMode ? "dark-contact-btn" : ""
-              }`}
+              className={`btn px-4 py-3 lh-1 d-flex justify-content-center align-items-center resume-btn contact-btn ${darkMode ? "dark-contact-btn" : ""
+                }`}
             >
               <FaPaperPlane className="me-2" /> Contact Us
             </Link>
