@@ -140,6 +140,12 @@ const content = {
   ],
   react: [
     {
+      title: "MCA College",
+      imageSrc: "https://i.postimg.cc/2z6Sdnhw/jordan.png",
+      sourceCodeLink: "https://github.com/amankureshi/SVIM_College",
+      visitPageLink: "https://svim-mca.vercel.app/",
+    },
+    {
       title: "Air-Jordan",
       imageSrc: "https://i.postimg.cc/2z6Sdnhw/jordan.png",
       sourceCodeLink: "https://github.com/amankureshi/Air-jordan-react",
@@ -191,9 +197,8 @@ export default function Project({ darkMode }) {
 
   return (
     <div
-      className={`container tab-center text-center p-4 ${
-        darkMode ? " text-light" : ""
-      }`}
+      className={`container tab-center text-center p-4 ${darkMode ? " text-light" : ""
+        }`}
       id="projects"
     >
       <h2
@@ -207,15 +212,14 @@ export default function Project({ darkMode }) {
         {Object.keys(content).map((tab) => (
           <button
             key={tab}
-            className={`btn btn-custom mt-4 ${
-              activeTab === tab
-                ? darkMode
-                  ? "btn-warning active"
-                  : "btn-primary active"
-                : darkMode
+            className={`btn btn-custom mt-4 ${activeTab === tab
+              ? darkMode
+                ? "btn-warning active"
+                : "btn-primary active"
+              : darkMode
                 ? "btn-outline-light"
                 : "btn-secondary"
-            }`}
+              }`}
             onClick={() => handleTabChange(tab)}
           >
             {tab.toUpperCase()}
@@ -245,18 +249,16 @@ export default function Project({ darkMode }) {
                   <a
                     href={item.sourceCodeLink}
                     target="_blank"
-                    className={`btn btn-link ${
-                      darkMode ? "dark-btn-link" : "text-warning"
-                    }`}
+                    className={`btn btn-link ${darkMode ? "dark-btn-link" : "text-warning"
+                      }`}
                   >
                     Source Code
                   </a>
                   <a
                     href={item.visitPageLink}
                     target="_blank"
-                    className={`btn btn-link ${
-                      darkMode ? "dark-btn-link" : "text-warning"
-                    }`}
+                    className={`btn btn-link ${darkMode ? "dark-btn-link" : "text-warning"
+                      }`}
                   >
                     Visit Page
                   </a>
