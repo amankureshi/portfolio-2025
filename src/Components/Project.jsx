@@ -140,7 +140,7 @@ const content = {
   react: [
     {
       title: "MCA College",
-      imageSrc: "https://i.postimg.cc/2z6Sdnhw/jordan.png",
+      imageSrc: "https://i.postimg.cc/P5MxFvJ1/mca.jpg",
       sourceCodeLink: "https://github.com/amankureshi/SVIM_College",
       visitPageLink: "https://svim-mca.vercel.app/",
     },
@@ -201,15 +201,23 @@ export default function Project({ darkMode }) {
       className={`container tab-center text-center p-4 ${darkMode ? " text-light" : ""
         }`}
       id="projects"
+      data-aos="fade-up"
+      data-aos-duration="800"
     >
       <h2
         className={` ${darkMode ? "text-light" : ""}`}
         data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="700"
         data-aos-anchor-placement="top-bottom"
       >
         My Projects
       </h2>
-      <div className="btn-group mb-4">
+      <div className="btn-group mb-4"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="700"
+      >
         {Object.keys(content).map((tab) => (
           <button
             key={tab}
@@ -230,7 +238,11 @@ export default function Project({ darkMode }) {
 
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {content[activeTab].map((item, index) => (
-          <div key={index} className="col">
+          <div key={index} className="col"
+            data-aos="fade-up"
+            data-aos-delay={600 + index * 100}
+
+          >
             <div className={`card ${darkMode ? "dark-card" : ""}`}>
               <h4 className="card-title pt-3 pb-2">{item.title}</h4>
               {loading[index] && (
