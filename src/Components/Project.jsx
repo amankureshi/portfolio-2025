@@ -40,7 +40,6 @@ const content = {
       sourceCodeLink: "https://github.com/amankureshi/Music-Player-App",
       visitPageLink: "https://song-anywhere.vercel.app/",
     },
-    ,
     {
       title: "Color-changer",
       imageSrc: "https://i.postimg.cc/fyTD9y6v/arrow.jpg",
@@ -180,7 +179,9 @@ const content = {
 
 export default function Project({ darkMode }) {
   const [activeTab, setActiveTab] = useState("javascript");
-  const [loading, setLoading] = useState([]);
+  const [loading, setLoading] = useState(
+    new Array(content.javascript.length).fill(true)
+  );
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
