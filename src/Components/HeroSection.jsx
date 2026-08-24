@@ -16,7 +16,7 @@ const HeroSection = ({ darkMode }) => {
       id="home"
       to="home"
     >
-      <main className="hero-content container mt-5">
+      <main className="hero-content container">
         <div
           className="animation-text"
           data-aos="fade-right"
