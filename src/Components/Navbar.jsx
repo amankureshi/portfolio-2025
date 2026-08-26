@@ -2,147 +2,146 @@ import React from "react";
 import "./Navbar.css";
 import { FaBluesky } from "react-icons/fa6";
 import { Link } from "react-scroll";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaCodepen } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaCodepen } from "react-icons/fa";
 
 const Navbar = ({ darkMode }) => {
-  return (
-    <div className={darkMode ? "nav-bg dark-mode" : "nav-bg"}>
-      <div className="container fixed-top">
-        <nav className="navbar navbar-expand-lg navbar-light">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="#">
-              <div className="highlight">AMAN</div>
-              <FaBluesky className="fly-icon" />
-              <div className={`name ${darkMode ? "text-white" : "text-dark"}`}>
-                KURESHI
-              </div>
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse "
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav mx-auto mb-2 mb-lg-0 ">
-                <li className="nav-item">
-                  <Link
-                    className={`nav-link ${
-                      darkMode ? "text-white" : "text-dark"
-                    }`}
-                    to="home"
-                    smooth={true}
-                    duration={100}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className={`nav-link ${
-                      darkMode ? "text-white" : "text-dark"
-                    }`}
-                    to="projects"
-                    smooth={true}
-                    duration={100}
-                    offset={-50}
-                  >
-                    Projects
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className={`nav-link ${
-                      darkMode ? "text-white" : "text-dark"
-                    }`}
-                    to="about"
-                    smooth={true}
-                    duration={100}
-                    offset={-50}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className={`nav-link ${
-                      darkMode ? "text-white" : "text-dark"
-                    }`}
-                    to="skill_section"
-                    smooth={true}
-                    duration={100}
-                    offset={-50}
-                  >
-                    Skills
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link
-                    className={`nav-link ${
-                      darkMode ? "text-white" : "text-dark"
-                    }`}
-                    to="statics_section"
-                    smooth={true}
-                    duration={100}
-                    offset={-50}
-                  >
-                    Statics
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <li className="nav-item">
-                    <Link
-                      className={`nav-link ${
-                        darkMode ? "text-white" : "text-dark"
-                      }`}
-                      to="contact"
-                      smooth={true}
-                      duration={100}
-                      offset={-50}
-                    >
-                      Contact us
-                    </Link>
-                  </li>
-                </li>
-              </ul>
+  const linkClass = `nav-link ${darkMode ? "text-white" : "text-dark"}`;
 
-              <div className="d-flex gap-2 h6 mt-1">
-                <a
-                  href="https://github.com/amankureshi"
-                  className="text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
-                  target="_blank"
+  return (
+    <div className={`nav-bg ${darkMode ? "dark-mode" : ""}`}>
+      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+        <div className="container">
+          <a className="navbar-brand" href="#home">
+            <div className="highlight">AMAN</div>
+            <FaBluesky className="fly-icon" />
+            <div className={darkMode ? "name text-white" : "name text-dark"}>
+              KURESHI
+            </div>
+          </a>
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            className="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  className={linkClass}
+                  to="home"
+                  smooth
+                  duration={100}
                 >
-                  <FaGithub />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/aman-kureshi/"
-                  className="text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
-                  target="_blank"
+                  Home
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className={linkClass}
+                  to="projects"
+                  smooth
+                  duration={100}
+                  offset={-50}
                 >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://codepen.io/amankureshi786"
-                  className="text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
-                  target="_blank"
+                  Projects
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className={linkClass}
+                  to="about"
+                  smooth
+                  duration={100}
+                  offset={-50}
                 >
-                  <FaCodepen />
-                </a>
-              </div>
+                  About
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className={linkClass}
+                  to="skill_section"
+                  smooth
+                  duration={100}
+                  offset={-50}
+                >
+                  Skills
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className={linkClass}
+                  to="statics_section"
+                  smooth
+                  duration={100}
+                  offset={-50}
+                >
+                  Statics
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  className={linkClass}
+                  to="contact"
+                  smooth
+                  duration={100}
+                  offset={-50}
+                >
+                  Contact us
+                </Link>
+              </li>
+            </ul>
+
+            <div className="d-flex gap-2 align-items-center">
+              <a
+                href="https://github.com/amankureshi"
+                className="social-icon text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/aman-kureshi/"
+                className="social-icon text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+
+              <a
+                href="https://codepen.io/amankureshi786"
+                className="social-icon text-white bg-dark rounded-circle p-2 d-inline-flex align-items-center justify-content-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CodePen"
+              >
+                <FaCodepen />
+              </a>
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
   );
 };
