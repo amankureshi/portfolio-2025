@@ -1,110 +1,190 @@
-/* Styles for the Skills section */
+/* =====================================================
+   SKILLS SECTION
+===================================================== */
 .skills-section {
-    background-color: #f2f8fd;
-    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
     min-height: 100vh;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
 }
 
-.skills-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* =====================================================
+   THEMES
+===================================================== */
+.skills-light {
+    background:
+        radial-gradient(circle at 15% 15%,
+            rgba(212, 179, 92, 0.10),
+            transparent 25%),
+        #f8fafc;
 }
 
-.skills-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #10103e;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.skills-dark {
+    background:
+        radial-gradient(circle at 85% 20%,
+            rgba(212, 179, 92, 0.09),
+            transparent 28%),
+        #0b0e16;
 }
 
-.skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* =====================================================
+   BACKGROUND GRID
+===================================================== */
+.skills-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(212, 179, 92, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(212, 179, 92, 0.035) 1px,
+            transparent 1px);
+    background-size: 60px 60px;
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+    pointer-events: none;
 }
 
-.skills-card-container {
-    flex: 1 1 200px;
-    max-width: 200px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+/* =====================================================
+   ORBS
+===================================================== */
+.skills-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(55px);
 }
 
-.skills-card {
-    background-color: #fff;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
+.skills-orb-one {
+    width: 220px;
+    height: 220px;
+    top: 10%;
+    right: 5%;
+    background: rgba(212, 179, 92, 0.07);
 }
 
-.skills-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.skills-orb-two {
+    width: 180px;
+    height: 180px;
+    bottom: 5%;
+    left: 5%;
+    background: rgba(70, 130, 200, 0.05);
 }
 
-.skills-card-image {
-    width: 70%;
+/* =====================================================
+   HEADING
+===================================================== */
+.skills-line {
+    width: 35px;
+    height: 2px;
+    background: #d4b35c;
+}
+
+.skills-heading span {
+    color: #c29b42;
+}
+
+/* =====================================================
+   SKILL CARD
+===================================================== */
+.skill-card {
+    min-height: 165px;
+    border: 1px solid rgba(212, 179, 92, 0.12) !important;
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.skills-dark .skill-card {
+    background: #151922 !important;
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 179, 92, 0.45) !important;
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.13);
+}
+
+/* =====================================================
+   ICON
+===================================================== */
+.skill-icon-box {
+    width: 75px;
+    height: 75px;
+    background: rgba(212, 179, 92, 0.07);
+    border: 1px solid rgba(212, 179, 92, 0.15);
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.skill-icon {
+    width: 48px;
+    height: 48px;
     object-fit: contain;
-    margin: 0 auto;
-    display: block;
-    padding: 10px;
+    transition: transform 0.3s ease;
 }
 
-.skills-card-body {
-    text-align: center;
+.skill-card:hover .skill-icon {
+    transform: scale(1.12);
 }
 
-.skills-card-title {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #333;
-    margin-top: 10px;
-    transition: color 0.3s ease;
+.skill-card:hover .skill-icon-box {
+    background: rgba(212, 179, 92, 0.13);
 }
 
-.skills-card-body:hover .skills-card-title {
-    color: #000055;
-}
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 575.98px) {
+    .skills-section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
 
-.skills-card-dark {
-    background-color: transparent;
-    border-radius: 10px;
-    box-shadow: transparent;
-}
+    .skills-heading {
+        font-size: 2.1rem;
+    }
 
-.skills-row .dark-bg {
-    background-color: rgb(55, 54, 58);
-}
+    .skill-card {
+        min-height: 145px;
+    }
 
-.skills-card-dark .skills-card-title {
-    color: #f8f9fa;
-}
+    .skill-icon-box {
+        width: 62px;
+        height: 62px;
+    }
 
-
-/* Make the layout responsive */
-@media (max-width: 768px) {
-    .skills-card-container {
-        flex: 1 1 45%;
+    .skill-icon {
+        width: 40px;
+        height: 40px;
     }
 }
 
-@media (max-width: 576px) {
-    .skills-card-container {
-        flex: 1 1 30%;
+/* =====================================================
+   REDUCE MOTION
+===================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    .skill-card,
+    .skill-icon,
+    .skill-icon-box {
+        transition: none;
     }
 
-    .skills-card-image {
-        width: 100%;
-        margin-top: 0px;
-        margin-bottom: 0px;
+    .skill-card:hover {
+        transform: none;
     }
 }
