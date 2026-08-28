@@ -1,53 +1,331 @@
+/* =====================================================
+   GITHUB SECTION
+===================================================== */
 .github-section {
-    padding: 50px 20px;
-    border-radius: 12px;
-    max-width: 1200px;
-    margin: auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    background: #fff;
+    color: #20242b;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #10103e;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.github-section.dark-mode {
+    background: #0b0e16;
+    color: #f1f3f5;
 }
 
-.contribution-chart {
+/* =====================================================
+   BACKGROUND
+===================================================== */
+.github-grid {
+    position: absolute;
+    inset: 0;
+    opacity: .3;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(212, 179, 92, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 179, 92, .035) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+}
+
+.github-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(70px);
+    opacity: .35;
+}
+
+.github-orb-one {
+    width: 260px;
+    height: 260px;
+    top: 5%;
+    right: -80px;
+    background: rgba(212, 179, 92, .14);
+}
+
+.github-orb-two {
+    width: 220px;
+    height: 220px;
+    bottom: 5%;
+    left: -80px;
+    background: rgba(60, 120, 200, .08);
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.github-eyebrow {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #b08b32;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
 }
 
-.github-img {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.github-eyebrow span {
+    width: 32px;
+    height: 2px;
+    background: #d4b35c;
+}
+
+.github-title {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 600;
+    letter-spacing: -1.5px;
+}
+
+.github-title span {
+    color: #c29b42;
+    background: linear-gradient(90deg,
+            #a77d25,
+            #e0c66f,
+            #b88e32,
+            #e4ca76);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: githubGoldShimmer 5s linear infinite;
+}
+
+@keyframes githubGoldShimmer {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 300% center;
+    }
+}
+
+.github-subtitle {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   PANELS
+===================================================== */
+.github-panel,
+.github-stat-card {
+    position: relative;
+    background: rgba(255, 255, 255, .78);
+    border: 1px solid rgba(212, 179, 92, .18);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .07);
+    backdrop-filter: blur(12px);
+}
+
+.github-panel-dark,
+.github-stat-card-dark {
+    background: rgba(18, 22, 32, .78);
+    border-color: rgba(212, 179, 92, .18);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+}
+
+/* =====================================================
+   CONTRIBUTION CHART
+===================================================== */
+.github-chart-wrapper {
     width: 100%;
-    max-width: 900px;
-    filter: hue-rotate(343deg) saturate(2);
+    overflow-x: auto;
+    padding: 5px 0 2px;
 }
 
-.github-cards {
+.github-chart {
+    display: block;
+    width: 100%;
+    min-width: 650px;
+    max-height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    filter: hue-rotate(343deg) saturate(1.7);
+}
+
+/* =====================================================
+   LIVE BADGE
+===================================================== */
+.github-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #269653;
+    background: rgba(54, 181, 107, .08);
+    border: 1px solid rgba(54, 181, 107, .18);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.github-live-badge span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #36b56b;
+    box-shadow: 0 0 8px rgba(54, 181, 107, .7);
+    animation: githubPulse 2s infinite;
+}
+
+@keyframes githubPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .5;
+        transform: scale(.75);
+    }
+}
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+.github-stat-card {
+    padding: 22px;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.github-stat-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 179, 92, .45);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .12);
+}
+
+.github-card-heading {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.github-cards .github-card {
-    width: 100%;
-    max-width: 490px;
-    /* border-radius: 12px; */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.github-card-heading h5 {
+    font-size: 16px;
 }
 
-.github-card2 {
+.github-number {
+    color: #c29b42;
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   STAT IMAGES
+===================================================== */
+.github-image-link {
+    display: block;
+    text-align: center;
+}
+
+.github-stat-image {
     width: 100%;
-    max-width: 380px;
-    /* border-radius: 12px; */
-    box-shadow: 0 4px 12px rgba(160, 7, 7, 0.1);
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.github-language-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 210px;
+}
+
+.github-language-image {
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+    display: block;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.github-footer-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #8b9098;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #d4b35c;
+    box-shadow: 0 0 10px rgba(212, 179, 92, .5);
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 767.98px) {
+    .github-section {
+        min-height: auto;
+    }
+
+    .github-eyebrow {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .github-eyebrow span {
+        width: 20px;
+    }
+
+    .github-title {
+        font-size: 2.3rem;
+    }
+
+    .github-subtitle {
+        font-size: 13px;
+    }
+
+    .github-panel,
+    .github-stat-card {
+        border-radius: 14px;
+    }
+
+    .github-stat-card {
+        padding: 17px;
+    }
+
+    .github-chart {
+        min-width: 600px;
+    }
+
+    .github-card-heading {
+        margin-bottom: 15px;
+    }
+
+    .github-number {
+        font-size: 15px;
+    }
 }
