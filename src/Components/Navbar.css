@@ -1,139 +1,642 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-bg .container {
-    backdrop-filter: blur(4px);
-}
-
-
-.navbar .navbar-brand {
-    font-size: 10px;
-    font-weight: 600;
+/* =====================================================
+   NAVBAR WRAPPER
+===================================================== */
+.nav-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    z-index: 9999;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 2px;
+    padding: 10px 0;
+    pointer-events: none;
+    transition:
+        background 0.4s ease,
+        padding 0.4s ease;
 }
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+    width: 100%;
+    padding: 0;
+    pointer-events: auto;
+}
+
+/* =====================================================
+   NAVBAR CONTAINER
+===================================================== */
+.navbar-container {
+    min-height: 58px;
+    padding: 7px 18px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(212, 179, 92, 0.20);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition:
+        background 0.4s ease,
+        border 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* =====================================================
+   DARK NAVBAR
+===================================================== */
+.nav-bg.dark-mode .navbar-container {
+    background: rgba(11, 14, 22, 0.82);
+    border-color: rgba(212, 179, 92, 0.20);
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-right: 20px;
+    padding: 0;
+    text-decoration: none;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* AMAN */
+.navbar-brand .highlight {
+    color: #c9ad60;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* KURESHI */
+.navbar-brand .name {
+    color: #17213b;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-bg.dark-mode .navbar-brand .name {
+    color: #f1f3f5;
+}
+
+/* =====================================================
+   🦋 UNIQUE BUTTERFLY FLIGHT
+===================================================== */
+
+.butterfly-flight {
+    position: relative;
+
+    width: 29px;
+    height: 29px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 2px;
+
+    animation: butterflyPath 5s ease-in-out infinite;
+
+    will-change: transform;
+}
+
+
+/* =====================================================
+   BUTTERFLY
+===================================================== */
 
 .fly-icon {
-    color: #F63EAA;
-    font-size: 2rem;
-    transition: transform 2s ease, opacity 2s ease;
+    position: relative;
+
+    color: #f63eaa;
+
+    font-size: 1.65rem;
+
+    z-index: 3;
+
+    transform-origin: center;
+
+    animation:
+        wingFlutter 0.75s ease-in-out infinite alternate,
+        butterflyTilt 2.5s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 0 3px rgba(246, 62, 170, 0.35));
+
+    will-change: transform;
 }
 
-.navbar .navbar-brand:hover .fly-icon {
-    animation: flyAndFlip 2s forwards;
-}
 
-@keyframes flyAndFlip {
+/* =====================================================
+   🌬️ FLIGHT PATH
+===================================================== */
+
+@keyframes butterflyPath {
+
     0% {
-        transform: translate(0, 0) rotate(0deg);
+        transform: translate3d(0, 0, 0);
     }
 
-    50% {
-        transform: translate(30px, -30px) rotate(180deg);
+    18% {
+        transform: translate3d(4px, -4px, 0);
+    }
 
+    35% {
+        transform: translate3d(8px, -1px, 0);
+    }
+
+    52% {
+        transform: translate3d(5px, -7px, 0);
+    }
+
+    68% {
+        transform: translate3d(-2px, -4px, 0);
+    }
+
+    84% {
+        transform: translate3d(-4px, 1px, 0);
     }
 
     100% {
-        transform: translate(60px, -60px) rotate(360deg);
-
+        transform: translate3d(0, 0, 0);
     }
 }
 
-.navbar .navbar-brand .fly-icon {
-    animation: continueAnimation 2s ease-in-out forwards;
-}
 
-@keyframes continueAnimation {
+/* =====================================================
+   🪽 WING FLUTTER
+===================================================== */
+
+@keyframes wingFlutter {
+
     0% {
-        transform: translate(60px, -60px) rotate(360deg);
-
-    }
-
-    50% {
-        transform: translate(30px, -30px) rotate(180deg);
-
+        transform: rotate(-4deg) scaleX(1);
     }
 
     100% {
-        transform: translate(0, 0) rotate(0deg);
-
+        transform: rotate(5deg) scaleX(0.88);
     }
+}
+
+
+/* =====================================================
+   🦋 NATURAL BODY TILT
+===================================================== */
+
+@keyframes butterflyTilt {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    25% {
+        margin-top: -1px;
+    }
+
+    50% {
+        margin-top: 1px;
+    }
+
+    75% {
+        margin-top: -2px;
+    }
+}
+
+
+/* =====================================================
+   ✨ BUTTERFLY GLOW
+===================================================== */
+
+.butterfly-glow {
+    position: absolute;
+
+    width: 17px;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(246, 62, 170, 0.38) 0%,
+            rgba(246, 62, 170, 0.12) 40%,
+            transparent 72%);
+
+    filter: blur(3px);
+
+    opacity: 0.65;
+
+    animation: glowPulse 1.8s ease-in-out infinite;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: scale(1.35);
+        opacity: 0.75;
+    }
+}
+
+
+/* =====================================================
+   ✦ FLOATING PARTICLES
+===================================================== */
+
+.butterfly-spark {
+    position: absolute;
+
+    color: #e0c66f;
+
+    font-size: 7px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    text-shadow:
+        0 0 5px rgba(224, 198, 111, 0.8);
+
+    animation: sparkFloat 3s ease-in-out infinite;
+}
+
+
+.spark-one {
+    top: 1px;
+    right: -4px;
+
+    animation-delay: 0.8s;
+}
+
+
+.spark-two {
+    left: -3px;
+    bottom: 2px;
+
+    font-size: 11px;
+
+    animation-delay: 1.8s;
+}
+
+
+@keyframes sparkFloat {
+
+    0% {
+        opacity: 0;
+        transform: translate(0, 4px) scale(0.3);
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    55% {
+        opacity: 1;
+        transform: translate(3px, -5px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(6px, -11px) scale(0.2);
+    }
+}
+
+
+/* =====================================================
+   ✨ HOVER — BUTTERFLY COMES CLOSER
+===================================================== */
+
+.navbar-brand:hover .butterfly-flight {
+    animation-play-state: paused;
+
+    transform:
+        translate3d(4px, -5px, 0) rotate(-7deg) scale(1.12);
+
+    transition:
+        transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+
+.navbar-brand:hover .fly-icon {
+    color: #ff54ba;
+
+    filter:
+        drop-shadow(0 0 4px rgba(246, 62, 170, 0.7)) drop-shadow(0 0 12px rgba(246, 62, 170, 0.25));
+}
+
+
+.navbar-brand:hover .butterfly-glow {
+    opacity: 1;
+
+    transform: scale(1.5);
+}
+
+
+/* =====================================================
+   🌙 DARK MODE
+===================================================== */
+
+.nav-bg.dark-mode .fly-icon {
+    color: #ff63c1;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255, 99, 193, 0.45));
+}
+
+
+.nav-bg.dark-mode .butterfly-glow {
+    background:
+        radial-gradient(circle,
+            rgba(255, 99, 193, 0.45) 0%,
+            rgba(255, 99, 193, 0.12) 45%,
+            transparent 75%);
+}
+
+
+.nav-bg.dark-mode .butterfly-spark {
+    color: #f0d477;
+}
+
+
+/* =====================================================
+   📱 MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .butterfly-flight {
+        width: 25px;
+        height: 25px;
+    }
+
+    .fly-icon {
+        font-size: 1.35rem;
+    }
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* NAV ITEM */
+.nav-item {
+    position: relative;
+}
+
+/* NAV LINK */
+.nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 13px !important;
+    color: #6d727b !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* HOVER */
+.nav-link:hover {
+    color: #b18b32 !important;
+    background: rgba(212, 179, 92, 0.08);
+    transform: translateY(-1px);
+}
+
+/* GOLD UNDERLINE */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #a77d25, #e0c66f, #b88e32);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 55%;
+}
+
+/* =====================================================
+   DARK LINKS
+===================================================== */
+.nav-bg.dark-mode .nav-link {
+    color: #bfc4cc !important;
+}
+
+.nav-bg.dark-mode .nav-link:hover {
+    color: #e0c66f !important;
+    background: rgba(212, 179, 92, 0.08);
+}
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-left: 15px;
+}
+
+/* SOCIAL ICON */
+.social-icon {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #68707b;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    font-size: 14px;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* DARK SOCIAL */
+.nav-bg.dark-mode .social-icon {
+    color: #c8cdd5;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* SOCIAL HOVER */
+.social-icon:hover {
+    color: #16181d;
+    background: #d4b35c;
+    border-color: #d4b35c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(212, 179, 92, 0.25);
+}
+
+/* =====================================================
+   TOGGLER
+===================================================== */
+.navbar-toggler {
+    padding: 7px 8px;
+    border: 1px solid rgba(212, 179, 92, 0.25) !important;
+    border-radius: 9px;
+    background: rgba(212, 179, 92, 0.06);
 }
 
 .navbar-toggler:focus {
     box-shadow: none;
 }
 
-.navbar-light .navbar-toggler-icon {
-    background-image: url(https://img.icons8.com/?size=192&id=Rdp3AydLFY2A&format=png);
+.navbar-toggler-icon {
+    width: 22px;
+    height: 22px;
+    background-image: url("https://img.icons8.com/?size=192&id=Rdp3AydLFY2A&format=png");
+    background-size: contain;
 }
 
-/* Logo-css */
-.navbar-brand .highlight {
-    /* color: #ffaa50; */
-    color: #cdba76;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-}
-
-.navbar-brand .name {
-    color: #000a47;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 0.5px;
-}
-
-ul .nav-link {
-    text-align: center;
-    display: inline-block;
-    color: #aaa;
-    padding: 13px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-ul a:hover {
-    color: #607D8B;
-}
-
-.nav-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #192F57;
-    transition: width .3s;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-.navbar-light .navbar-toggler {
-    border-color: transparent;
-}
-
-@media (max-width:400px) {
-    .navbar-brand .highlight {
-        font-size: 1rem;
+/* =====================================================
+   TABLET
+===================================================== */
+@media (max-width: 1199.98px) {
+    .navbar-container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .navbar .name {
-        font-size: 1rem;
+    .nav-link {
+        padding-left: 9px !important;
+        padding-right: 9px !important;
+        font-size: 11px;
     }
 
-    .navbar .navbar-brand {
-        font-size: 1rem;
+    .social-links {
+        margin-left: 8px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 991.98px) {
+    .nav-bg {
+        height: auto;
+        padding: 8px 0;
+    }
+
+    .navbar-container {
+        min-height: 58px;
+        border-radius: 14px;
+    }
+
+    /* MOBILE MENU */
+    .navbar-collapse {
+        margin-top: 10px;
+        padding: 12px;
+        border-radius: 13px;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(212, 179, 92, 0.18);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+    }
+
+    .nav-bg.dark-mode .navbar-collapse {
+        background: rgba(11, 14, 22, 0.96);
+        border-color: rgba(212, 179, 92, 0.18);
+    }
+
+    .navbar-nav {
+        width: 100%;
+        gap: 2px;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 11px 13px !important;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    /* SOCIAL */
+    .social-links {
+        justify-content: center;
+        margin: 12px 0 3px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(128, 128, 128, 0.15);
+    }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+@media (max-width: 420px) {
+    .navbar-container {
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 12px;
+    }
+
+    .navbar-brand .highlight,
+    .navbar-brand .name {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+
+    .fly-icon {
+        font-size: 1.35rem;
     }
 }
