@@ -21,7 +21,7 @@ const Skills = ({ darkMode }) => {
     },
     {
       imageSrc: "https://img.icons8.com/?size=200&id=HKNzD81eiiSc&format=png",
-      name: "J-query",
+      name: "jQuery",
     },
     {
       imageSrc: "https://mahin.vercel.app/svgs/BOOTSTRAPT-icon.svg",
@@ -47,45 +47,101 @@ const Skills = ({ darkMode }) => {
 
   return (
     <section
-      className={`skills-section ${darkMode ? "bg-dark text-light" : ""}`}
       id="skill_section"
-      to="skill_section"
+      className={`skills-section py-5 ${darkMode ? "skills-dark text-light" : "skills-light text-dark"
+        }`}
     >
-      <div className="skills-container">
-        <h2
-          className={`${darkMode ? "text-light" : ""} skills-heading`}
+      {/* Background decoration */}
+      <div className="skills-orb skills-orb-one" />
+      <div className="skills-orb skills-orb-two" />
+      <div className="skills-grid-bg" />
+
+      <div className="container position-relative">
+
+        {/* ================= HEADER ================= */}
+        <div
+          className="text-center mx-auto mb-4 mb-md-5"
+          style={{ maxWidth: "700px" }}
           data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="700"
         >
-          My Skills
-        </h2>
-        <div className="skills-row container">
+          <div className="d-flex align-items-center justify-content-center gap-2 mb-3">
+            <span className="skills-line" />
+
+            <span className="small fw-bold text-uppercase text-warning">
+              My Expertise
+            </span>
+
+            <span className="skills-line" />
+          </div>
+
+          <h2 className="display-5 fw-bold mb-3 skills-heading">
+            My <span>Skills</span>
+          </h2>
+
+          <p
+            className={`mb-0 ${darkMode ? "text-white-50" : "text-secondary"
+              }`}
+          >
+            Technologies and tools I use to build modern, responsive and
+            user-friendly web experiences.
+          </p>
+        </div>
+
+        {/* ================= SKILLS GRID ================= */}
+        <div className="row g-3 g-md-4 justify-content-center">
+
           {data.map((item, index) => (
             <div
-              className={`skills-card-container ${
-                darkMode ? "skills-card-dark" : ""
-              }`}
-              key={index}
+              key={item.name}
+              className="col-6 col-sm-4 col-md-3 col-lg-2"
+              data-aos="fade-up"
+              data-aos-delay={Math.min(index * 50, 250)}
             >
-              <div className={`skills-card ${darkMode ? "dark-bg" : ""}`}>
-                <img
-                  src={item.imageSrc}
-                  className="skills-card-image"
-                  alt={item.name}
-                />
-                <div className="skills-card-body">
-                  <h5
-                    className={`skills-card-title ${
-                      darkMode ? "text-light" : "text-dark"
-                    }`}
-                  >
+              <div
+                className={`card skill-card h-100 border-0 rounded-4 text-center ${darkMode
+                  ? "bg-dark text-light"
+                  : "bg-white text-dark"
+                  }`}
+              >
+                {/* Icon */}
+                <div className="card-body d-flex flex-column align-items-center justify-content-center p-3 p-md-4">
+
+                  <div className="skill-icon-box rounded-4 d-flex align-items-center justify-content-center mb-3">
+                    <img
+                      src={item.imageSrc}
+                      alt={item.name}
+                      className="img-fluid skill-icon"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <h3 className="h6 fw-semibold mb-0">
                     {item.name}
-                  </h5>
+                  </h3>
+
                 </div>
               </div>
             </div>
           ))}
+
         </div>
+
+        {/* ================= BOTTOM INFO ================= */}
+        <div
+          className="text-center mt-5 pt-2"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <span
+            className={`small ${darkMode ? "text-white-50" : "text-secondary"
+              }`}
+          >
+            Always learning • Always improving
+          </span>
+        </div>
+
       </div>
     </section>
   );
