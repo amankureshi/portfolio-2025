@@ -16,7 +16,13 @@ const Navbar = ({ darkMode }) => {
           <a className="navbar-brand" href="#home">
             <span className="highlight">AMAN</span>
 
-            <FaBluesky className="fly-icon" />
+            <span className="butterfly-flight">
+              <span className="butterfly-glow"></span>
+              <FaBluesky className="fly-icon" />
+              <span className="butterfly-spark spark-one">✦</span>
+              <span className="butterfly-spark spark-two">·</span>
+            </span>
+
 
             <span className="name">
               KURESHI
