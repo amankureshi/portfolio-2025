@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./Project.css";
 import Loader from "../assets/Loader/loader-spinner.svg";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const content = {
   javascript: [
@@ -81,6 +82,7 @@ const content = {
       visitPageLink: "https://day-03.onrender.com/",
     },
   ],
+
   css: [
     {
       title: "Restaurant",
@@ -137,6 +139,7 @@ const content = {
       visitPageLink: "https://blog-website01.vercel.app/",
     },
   ],
+
   react: [
     {
       title: "MCA College",
@@ -179,7 +182,8 @@ const content = {
 
 export default function Project({ darkMode }) {
   const [activeTab, setActiveTab] = useState("javascript");
-  const [loading, setLoading] = useState(
+
+  const [loading, setLoading] = useState(() =>
     new Array(content.javascript.length).fill(true)
   );
 
@@ -190,97 +194,180 @@ export default function Project({ darkMode }) {
 
   const handleImageLoad = (index) => {
     setLoading((prev) => {
-      const newLoading = [...prev];
-      newLoading[index] = false;
-      return newLoading;
+      if (!prev[index]) return prev;
+
+      const updated = [...prev];
+      updated[index] = false;
+
+      return updated;
     });
   };
 
+  const projects = content[activeTab];
+
   return (
-    <div
-      className={`container tab-center text-center p-4 ${darkMode ? " text-light" : ""
-        }`}
+    <section
       id="projects"
-      data-aos="fade-up"
-      data-aos-duration="800"
+      className={`projects-section ${darkMode ? "dark-mode" : "light-mode"
+        }`}
     >
-      <h2
-        className={` ${darkMode ? "text-light" : ""}`}
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="700"
-        data-aos-anchor-placement="top-bottom"
-      >
-        My Projects
-      </h2>
-      <div className="btn-group mb-4"
-        data-aos="fade-up"
-        data-aos-delay="400"
-        data-aos-duration="700"
-      >
-        {Object.keys(content).map((tab) => (
-          <button
-            key={tab}
-            className={`btn btn-custom mt-4 ${activeTab === tab
-              ? darkMode
-                ? "btn-warning active"
-                : "btn-primary active"
-              : darkMode
-                ? "btn-outline-light"
-                : "btn-secondary"
-              }`}
-            onClick={() => handleTabChange(tab)}
-          >
-            {tab.toUpperCase()}
-          </button>
-        ))}
-      </div>
+      {/* Background */}
+      <div className="projects-orb projects-orb-one"></div>
+      <div className="projects-orb projects-orb-two"></div>
+      <div className="projects-grid"></div>
 
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        {content[activeTab].map((item, index) => (
-          <div key={index} className="col"
-            data-aos="fade-up"
-            data-aos-delay={600 + index * 100}
+      <div className="container">
 
-          >
-            <div className={`card ${darkMode ? "dark-card" : ""}`}>
-              <h4 className="card-title pt-3 pb-2">{item.title}</h4>
-              {loading[index] && (
-                <div className="loader-container">
-                  <img src={Loader} alt="Loading..." width="150" height="230" />
-                </div>
-              )}
-              <img
-                src={item.imageSrc}
-                alt={item.title}
-                onLoad={() => handleImageLoad(index)}
-                className="card-img-top"
-                style={{ display: loading[index] ? "none" : "block" }}
-              />
-              <div className="card-body">
-                <div className="d-flex justify-content-between">
-                  <a
-                    href={item.sourceCodeLink}
-                    target="_blank"
-                    className={`btn btn-link ${darkMode ? "dark-btn-link" : "text-warning"
-                      }`}
-                  >
-                    Source Code
-                  </a>
-                  <a
-                    href={item.visitPageLink}
-                    target="_blank"
-                    className={`btn btn-link ${darkMode ? "dark-btn-link" : "text-warning"
-                      }`}
-                  >
-                    Visit Page
-                  </a>
-                </div>
-              </div>
-            </div>
+        {/* SECTION HEADER */}
+        <div
+          className="projects-heading"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <div className="projects-eyebrow">
+            <span></span>
+            MY WORK
+            <span></span>
           </div>
-        ))}
+
+          <h2 className="projects-title">
+            Featured <span>Projects</span>
+          </h2>
+
+          <p className="projects-subtitle">
+            A collection of projects I've built while exploring frontend
+            development, UI design and modern web technologies.
+          </p>
+        </div>
+
+        {/* FILTER TABS */}
+        <div
+          className="project-tabs"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          {Object.keys(content).map((tab) => (
+            <button
+              key={tab}
+              type="button"
+              className={`project-tab ${activeTab === tab ? "active" : ""
+                }`}
+              onClick={() => handleTabChange(tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        {/* PROJECT COUNT */}
+        <div
+          className="project-meta"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
+          <span>
+            Showing <strong>{projects.length}</strong> projects
+          </span>
+
+          <span className="meta-line"></span>
+
+          <span>{activeTab.toUpperCase()}</span>
+        </div>
+
+        {/* PROJECT GRID */}
+        <div className="row g-4 project-grid">
+
+          {projects.map((item, index) => (
+            <div
+              key={`${activeTab}-${item.title}`}
+              className="col-12 col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay={Math.min(index * 70, 350)}
+            >
+              <article className="project-card">
+
+                {/* IMAGE */}
+                <div className="project-image-wrapper">
+
+                  {loading[index] && (
+                    <div className="project-loader">
+                      <img
+                        src={Loader}
+                        alt=""
+                        width="55"
+                        height="55"
+                      />
+                    </div>
+                  )}
+
+                  <img
+                    src={item.imageSrc}
+                    alt={`${item.title} project preview`}
+                    className="project-image"
+                    loading="lazy"
+                    decoding="async"
+                    onLoad={() => handleImageLoad(index)}
+                    onError={() => handleImageLoad(index)}
+                    style={{
+                      opacity: loading[index] ? 0 : 1,
+                    }}
+                  />
+
+                  {/* IMAGE OVERLAY */}
+                  <div className="project-overlay">
+                    <span>VIEW PROJECT</span>
+                  </div>
+
+                  {/* PROJECT NUMBER */}
+                  <span className="project-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                </div>
+
+                {/* CONTENT */}
+                <div className="project-content">
+
+                  <div className="project-title-row">
+                    <h3>{item.title}</h3>
+
+                    <span className="project-type">
+                      {activeTab}
+                    </span>
+                  </div>
+
+                  <div className="project-actions">
+
+                    <a
+                      href={item.sourceCodeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-action secondary"
+                    >
+                      <FaGithub />
+                      <span>Source</span>
+                    </a>
+
+                    <a
+                      href={item.visitPageLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-action primary"
+                    >
+                      <span>Live Demo</span>
+                      <FaExternalLinkAlt />
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </article>
+            </div>
+          ))}
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
