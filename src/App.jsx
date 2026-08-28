@@ -8,6 +8,7 @@ import Navbar from "./Components/Navbar";
 import Project from "./Components/Project";
 import Skills from "./Components/Skills";
 import GithubStatic from "./Components/GithubStatic";
+import ThemeSwitch from "./Components/ThemeSwitch";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -26,10 +27,12 @@ function App() {
   }
   return (
     <div className={darkMode ? "app dark-mode" : "app"}>
-      <button onClick={() => setDarkMode(!darkMode)} className="dark-mode-btn">
-        {darkMode ? "☀️ Light" : "🌙 Dark"}
-      </button>
-
+      <div className="container">
+        <ThemeSwitch
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+        />
+      </div>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <HeroSection darkMode={darkMode} />
       <Project darkMode={darkMode} />
