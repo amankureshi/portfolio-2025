@@ -208,7 +208,7 @@ export default function Project({ darkMode }) {
   return (
     <section
       id="projects"
-      className={`projects-section ${darkMode ? "dark-mode" : "light-mode"
+      className={`projects-section py-5 ${darkMode ? "dark-mode" : "light-mode"
         }`}
     >
       {/* Background */}
