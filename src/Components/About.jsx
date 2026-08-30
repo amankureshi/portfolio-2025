@@ -7,7 +7,7 @@ const About = ({ darkMode }) => {
   return (
     <section
       id="about"
-      className={`about-section ${darkMode ? "dark-mode" : "light-mode"}`}
+      className={`about-section py-5 ${darkMode ? "dark-mode" : "light-mode"}`}
     >
       {/* Background decoration */}
       <div className="about-orb about-orb-one"></div>
