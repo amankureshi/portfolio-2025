@@ -65,7 +65,7 @@ const About = ({ darkMode }) => {
               <div className="experience-badge">
                 <FaTrophy />
                 <div>
-                  <strong>3×</strong>
+                  <strong>4×</strong>
                   <span>Web Design Winner</span>
                 </div>
               </div>
@@ -145,7 +145,7 @@ const About = ({ darkMode }) => {
                   </div>
 
                   <div>
-                    <strong>3× Winner</strong>
+                    <strong>4× Winner</strong>
                     <span>Web Design</span>
                   </div>
                 </div>
