@@ -381,6 +381,91 @@
     vertical-align: -3px;
 }
 
+/* Premium Animated Gold Links */
+.hero-info a {
+    position: relative;
+    display: inline-block;
+
+    color: #b58b2e;
+    font-weight: 700;
+    text-decoration: none;
+
+    background: linear-gradient(110deg,
+            #b58b2e 0%,
+            #d4b35c 35%,
+            #e3be57 50%,
+            #b58b2e 65%,
+            #b58b2e 100%);
+
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: transform 0.35s ease;
+}
+
+/* Animated underline */
+.hero-info a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -2px;
+
+    width: 100%;
+    height: 1.5px;
+
+    background: linear-gradient(90deg,
+            #b58b2e,
+            #f5dfa0,
+            #b58b2e);
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover animation */
+.hero-info a:hover {
+    animation: goldShimmer 1.2s linear infinite;
+    transform: translateY(-2px);
+}
+
+.hero-info a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Smooth golden shine */
+@keyframes goldShimmer {
+    from {
+        background-position: 200% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+/* Superscript styling */
+.hero-info a sup {
+    font-size: 10px;
+    line-height: 0;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-info a,
+    .hero-info a::after {
+        animation: none;
+        transition: none;
+    }
+
+    .hero-info a:hover {
+        transform: none;
+    }
+}
 
 /* =====================================================
    BUTTONS
