@@ -315,7 +315,7 @@ export default function Project({ darkMode }) {
 
                   {/* IMAGE OVERLAY */}
                   <div className="project-overlay">
-                    <span>VIEW PROJECT</span>
+                    {/* <span>VIEW PROJECT</span> */}
                   </div>
 
                   {/* PROJECT NUMBER */}
