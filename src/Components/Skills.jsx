@@ -20,6 +20,14 @@ const Skills = ({ darkMode }) => {
       name: "React",
     },
     {
+      imageSrc: "https://mahin.vercel.app/svgs/Redux.svg",
+      name: "Redux",
+    },
+    {
+      imageSrc: "https://mahin.vercel.app/svgs/NodeJS.svg",
+      name: "Node",
+    },
+    {
       imageSrc: "https://img.icons8.com/?size=200&id=HKNzD81eiiSc&format=png",
       name: "jQuery",
     },
