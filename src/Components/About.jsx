@@ -107,10 +107,7 @@ const About = ({ darkMode }) => {
                 </p>
 
                 <p>
-                  During my BCA journey, I secured <strong>1st place</strong>{" "}
-                  in web design competitions in my 1st, 2nd and 3rd years.
-                  These experiences strengthened my creativity, problem-solving
-                  ability and confidence as a developer.
+                  During my BCA journey, I secured <strong>1st place</strong> in web design competitions in my 1st, 2nd, and 3rd years. Additionally, I achieved 1st rank in the 1st year of my MCA. These achievements strengthened my creativity, problem-solving abilities, and confidence as a developer.
                 </p>
               </div>
 
