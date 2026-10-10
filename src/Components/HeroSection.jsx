@@ -69,7 +69,7 @@ const HeroSection = ({ darkMode }) => {
 
                 <li>
                   <GiTrophyCup className="trophy-icon" />
-                  In my BCA, I achieved{" "}
+                  I achieved{" "}
                   <a
                     href="https://drive.google.com/drive/folders/199jgstGOC2N0tlEhWH2CYvhw21M4c-04?usp=sharing"
                     target="_blank"
@@ -77,8 +77,15 @@ const HeroSection = ({ darkMode }) => {
                   >
                     1<sup>st</sup> position
                   </a>{" "}
-                  in web design competitions during my 1st, 2nd, and 3rd
-                  years.
+                  in web design competitions during all three years of my BCA and secured{" "}
+                  <a
+                    href="https://drive.google.com/drive/folders/199jgstGOC2N0tlEhWH2CYvhw21M4c-04?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    1<sup>st</sup> rank
+                  </a>{" "}
+                  in the first year of my MCA.
                 </li>
               </ul>
 
